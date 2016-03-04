@@ -1,0 +1,88 @@
+\hypertarget{classBBox}{\section{B\+Box Class Reference}
+\label{classBBox}\index{B\+Box@{B\+Box}}
+}
+
+
+Uma Bounding\+Box usada para delimitar um objeto gáfico.  
+
+
+
+
+{\ttfamily \#include $<$B\+Box.\+hpp$>$}
+
+
+
+Collaboration diagram for B\+Box\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=157pt]{classBBox__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classPonto}{Ponto} \hyperlink{classBBox_a4aad8901de813b3339be3a1770c45ac0}{centro} () const 
+\item 
+void \hyperlink{classBBox_a820d32399477f89718bf78a3b7de84ec}{redesenha} (const vector$<$ \hyperlink{classPonto}{Ponto} $>$ \&pontos)
+\item 
+bool \hyperlink{classBBox_a24fa2b41697cd58987a1113e437772d6}{contem} (const \hyperlink{classPonto}{Ponto} \&ponto) const 
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classPonto}{Ponto} \hyperlink{classBBox_ab65bac30fa278acb493ac63631ad83e3}{min}
+\item 
+\hyperlink{classPonto}{Ponto} \hyperlink{classBBox_a2eb4d802aaaf2e65c7a03faa91855081}{max}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Uma Bounding\+Box usada para delimitar um objeto gáfico. 
+
+\begin{DoxyAuthor}{Author}
+Arthur Henrique Eggert 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2014-\/09-\/21 
+\end{DoxyDate}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classBBox_a4aad8901de813b3339be3a1770c45ac0}{\index{B\+Box@{B\+Box}!centro@{centro}}
+\index{centro@{centro}!B\+Box@{B\+Box}}
+\subsubsection[{centro}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Ponto} B\+Box\+::centro (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classBBox_a4aad8901de813b3339be3a1770c45ac0}
+O centro da \hyperlink{classBBox}{B\+Box} \hypertarget{classBBox_a24fa2b41697cd58987a1113e437772d6}{\index{B\+Box@{B\+Box}!contem@{contem}}
+\index{contem@{contem}!B\+Box@{B\+Box}}
+\subsubsection[{contem}]{\setlength{\rightskip}{0pt plus 5cm}bool B\+Box\+::contem (
+\begin{DoxyParamCaption}
+\item[{const {\bf Ponto} \&}]{ponto}
+\end{DoxyParamCaption}
+) const}}\label{classBBox_a24fa2b41697cd58987a1113e437772d6}
+Checa se o ponto esta dentro da \hyperlink{classBBox}{B\+Box} \hypertarget{classBBox_a820d32399477f89718bf78a3b7de84ec}{\index{B\+Box@{B\+Box}!redesenha@{redesenha}}
+\index{redesenha@{redesenha}!B\+Box@{B\+Box}}
+\subsubsection[{redesenha}]{\setlength{\rightskip}{0pt plus 5cm}void B\+Box\+::redesenha (
+\begin{DoxyParamCaption}
+\item[{const vector$<$ {\bf Ponto} $>$ \&}]{pontos}
+\end{DoxyParamCaption}
+)}}\label{classBBox_a820d32399477f89718bf78a3b7de84ec}
+Altera a bbox para que a mesma se ajuste ao pontos passados via parametro 
+
+\subsection{Member Data Documentation}
+\hypertarget{classBBox_a2eb4d802aaaf2e65c7a03faa91855081}{\index{B\+Box@{B\+Box}!max@{max}}
+\index{max@{max}!B\+Box@{B\+Box}}
+\subsubsection[{max}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Ponto} B\+Box\+::max}}\label{classBBox_a2eb4d802aaaf2e65c7a03faa91855081}
+\hypertarget{classBBox_ab65bac30fa278acb493ac63631ad83e3}{\index{B\+Box@{B\+Box}!min@{min}}
+\index{min@{min}!B\+Box@{B\+Box}}
+\subsubsection[{min}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Ponto} B\+Box\+::min}}\label{classBBox_ab65bac30fa278acb493ac63631ad83e3}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{BBox_8hpp}{B\+Box.\+hpp}\item 
+\hyperlink{BBox_8cpp}{B\+Box.\+cpp}\end{DoxyCompactItemize}

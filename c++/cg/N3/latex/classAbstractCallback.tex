@@ -1,0 +1,162 @@
+\hypertarget{classAbstractCallback}{\section{Abstract\+Callback Class Reference}
+\label{classAbstractCallback}\index{Abstract\+Callback@{Abstract\+Callback}}
+}
+
+
+Classe abstrata para lidar com os eventos dependendo do estado.  
+
+
+
+
+{\ttfamily \#include $<$Abstract\+Callback.\+hpp$>$}
+
+
+
+Inheritance diagram for Abstract\+Callback\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=316pt]{classAbstractCallback__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Abstract\+Callback\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{classAbstractCallback__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classAbstractCallback_ab410b1edcdfab5a74298edb8ee9cb4a9}{Abstract\+Callback} (\hyperlink{classMundo}{Mundo} \&\hyperlink{classAbstractCallback_a17c2460462c7e985368ef227338d3430}{mundo})
+\item 
+virtual \hyperlink{classAbstractCallback_a5ae7f5e51738a94b7dab97555babf40d}{$\sim$\+Abstract\+Callback} ()
+\item 
+virtual void \hyperlink{classAbstractCallback_aabd79b70b927b64276000d3d17959841}{display} ()
+\item 
+virtual void \hyperlink{classAbstractCallback_af897d4ee16944785ddb2d90ffad155b2}{keyboard} (unsigned char key, const \hyperlink{classPonto}{Ponto} \&point)
+\item 
+virtual void \hyperlink{classAbstractCallback_a1c30a14b8f6212712152364a6620760d}{mouse} (int button, int state, const \hyperlink{classPonto}{Ponto} \&point)=0
+\item 
+virtual void \hyperlink{classAbstractCallback_a6a13a67f479eb87c0416d1464b8ef37a}{movimento\+Mouse} (const \hyperlink{classPonto}{Ponto} \&ponto)=0
+\item 
+virtual void \hyperlink{classAbstractCallback_a649127b2eccaccc9e201073944f65e8c}{reshape} (int width, int height)
+\item 
+virtual void \hyperlink{classAbstractCallback_a92270c46a72e1b36f8ad72a26f7c37dd}{special} (int key, const \hyperlink{classPonto}{Ponto} \&point)=0
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classMundo}{Mundo} \& \hyperlink{classAbstractCallback_a17c2460462c7e985368ef227338d3430}{mundo}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Classe abstrata para lidar com os eventos dependendo do estado. 
+
+\begin{DoxyAuthor}{Author}
+Arthur Henrique Eggert 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2014-\/09-\/21 
+\end{DoxyDate}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classAbstractCallback_ab410b1edcdfab5a74298edb8ee9cb4a9}{\index{Abstract\+Callback@{Abstract\+Callback}!Abstract\+Callback@{Abstract\+Callback}}
+\index{Abstract\+Callback@{Abstract\+Callback}!Abstract\+Callback@{Abstract\+Callback}}
+\subsubsection[{Abstract\+Callback}]{\setlength{\rightskip}{0pt plus 5cm}Abstract\+Callback\+::\+Abstract\+Callback (
+\begin{DoxyParamCaption}
+\item[{{\bf Mundo} \&}]{mundo}
+\end{DoxyParamCaption}
+)}}\label{classAbstractCallback_ab410b1edcdfab5a74298edb8ee9cb4a9}
+Cria um estado para a manipulação do mundo grafico \hypertarget{classAbstractCallback_a5ae7f5e51738a94b7dab97555babf40d}{\index{Abstract\+Callback@{Abstract\+Callback}!````~Abstract\+Callback@{$\sim$\+Abstract\+Callback}}
+\index{````~Abstract\+Callback@{$\sim$\+Abstract\+Callback}!Abstract\+Callback@{Abstract\+Callback}}
+\subsubsection[{$\sim$\+Abstract\+Callback}]{\setlength{\rightskip}{0pt plus 5cm}Abstract\+Callback\+::$\sim$\+Abstract\+Callback (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classAbstractCallback_a5ae7f5e51738a94b7dab97555babf40d}
+Destroi este estado da aplicacao. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classAbstractCallback_aabd79b70b927b64276000d3d17959841}{\index{Abstract\+Callback@{Abstract\+Callback}!display@{display}}
+\index{display@{display}!Abstract\+Callback@{Abstract\+Callback}}
+\subsubsection[{display}]{\setlength{\rightskip}{0pt plus 5cm}void Abstract\+Callback\+::display (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classAbstractCallback_aabd79b70b927b64276000d3d17959841}
+Faz o display do \hyperlink{classMundo}{Mundo} Grafico. \hypertarget{classAbstractCallback_af897d4ee16944785ddb2d90ffad155b2}{\index{Abstract\+Callback@{Abstract\+Callback}!keyboard@{keyboard}}
+\index{keyboard@{keyboard}!Abstract\+Callback@{Abstract\+Callback}}
+\subsubsection[{keyboard}]{\setlength{\rightskip}{0pt plus 5cm}void Abstract\+Callback\+::keyboard (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{key, }
+\item[{const {\bf Ponto} \&}]{point}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classAbstractCallback_af897d4ee16944785ddb2d90ffad155b2}
+Callback de Teclado 
+
+Reimplemented in \hyperlink{classEdicaoCallback_ab2d6a4a0e971628e460e7505ff289ac9}{Edicao\+Callback}, and \hyperlink{classAdicaoCallback_a1161a0292e30660bbc653dd830ed7e78}{Adicao\+Callback}.
+
+\hypertarget{classAbstractCallback_a1c30a14b8f6212712152364a6620760d}{\index{Abstract\+Callback@{Abstract\+Callback}!mouse@{mouse}}
+\index{mouse@{mouse}!Abstract\+Callback@{Abstract\+Callback}}
+\subsubsection[{mouse}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Abstract\+Callback\+::mouse (
+\begin{DoxyParamCaption}
+\item[{int}]{button, }
+\item[{int}]{state, }
+\item[{const {\bf Ponto} \&}]{point}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classAbstractCallback_a1c30a14b8f6212712152364a6620760d}
+Callback de Mouse 
+
+Implemented in \hyperlink{classEdicaoCallback_ad3a885decb234555569dbb3d26f0dcdd}{Edicao\+Callback}, and \hyperlink{classAdicaoCallback_ac1a328393245c840b20bd78535786aad}{Adicao\+Callback}.
+
+\hypertarget{classAbstractCallback_a6a13a67f479eb87c0416d1464b8ef37a}{\index{Abstract\+Callback@{Abstract\+Callback}!movimento\+Mouse@{movimento\+Mouse}}
+\index{movimento\+Mouse@{movimento\+Mouse}!Abstract\+Callback@{Abstract\+Callback}}
+\subsubsection[{movimento\+Mouse}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Abstract\+Callback\+::movimento\+Mouse (
+\begin{DoxyParamCaption}
+\item[{const {\bf Ponto} \&}]{ponto}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classAbstractCallback_a6a13a67f479eb87c0416d1464b8ef37a}
+Callback do movimento de mouse 
+
+Implemented in \hyperlink{classEdicaoCallback_a58507cc2d8f1e0774fc15aa1d2adca92}{Edicao\+Callback}, and \hyperlink{classAdicaoCallback_a4fe49be2210d8b9ef60421e9e0c517bf}{Adicao\+Callback}.
+
+\hypertarget{classAbstractCallback_a649127b2eccaccc9e201073944f65e8c}{\index{Abstract\+Callback@{Abstract\+Callback}!reshape@{reshape}}
+\index{reshape@{reshape}!Abstract\+Callback@{Abstract\+Callback}}
+\subsubsection[{reshape}]{\setlength{\rightskip}{0pt plus 5cm}void Abstract\+Callback\+::reshape (
+\begin{DoxyParamCaption}
+\item[{int}]{width, }
+\item[{int}]{height}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classAbstractCallback_a649127b2eccaccc9e201073944f65e8c}
+Callback do redimencionamento da tela \hypertarget{classAbstractCallback_a92270c46a72e1b36f8ad72a26f7c37dd}{\index{Abstract\+Callback@{Abstract\+Callback}!special@{special}}
+\index{special@{special}!Abstract\+Callback@{Abstract\+Callback}}
+\subsubsection[{special}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Abstract\+Callback\+::special (
+\begin{DoxyParamCaption}
+\item[{int}]{key, }
+\item[{const {\bf Ponto} \&}]{point}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classAbstractCallback_a92270c46a72e1b36f8ad72a26f7c37dd}
+Calbback para teclas especias do teclado 
+
+Implemented in \hyperlink{classEdicaoCallback_ab3af9b7362efe5d4a8ec18cf840f66c0}{Edicao\+Callback}, and \hyperlink{classAdicaoCallback_adf5c6d3c487342ea989b7716db834684}{Adicao\+Callback}.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classAbstractCallback_a17c2460462c7e985368ef227338d3430}{\index{Abstract\+Callback@{Abstract\+Callback}!mundo@{mundo}}
+\index{mundo@{mundo}!Abstract\+Callback@{Abstract\+Callback}}
+\subsubsection[{mundo}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Mundo}\& Abstract\+Callback\+::mundo\hspace{0.3cm}{\ttfamily [protected]}}}\label{classAbstractCallback_a17c2460462c7e985368ef227338d3430}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{AbstractCallback_8hpp}{Abstract\+Callback.\+hpp}\item 
+\hyperlink{AbstractCallback_8cpp}{Abstract\+Callback.\+cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,20 @@
+<map id="Ponto.hpp" name="Ponto.hpp">
+<area shape="rect" id="node2" href="$BBox_8hpp.html" title="Definição da BBox. " alt="" coords="902,80,981,107"/>
+<area shape="rect" id="node3" href="$ObjetoGrafico_8hpp.html" title="Definição de Ojeto Gráfico. " alt="" coords="490,155,617,181"/>
+<area shape="rect" id="node5" href="$AbstractCallback_8hpp.html" title="Definição abstrata da classe da aplicação. " alt="" coords="116,304,263,331"/>
+<area shape="rect" id="node6" href="$AbstractCallback_8cpp.html" title="AbstractCallback.cpp" alt="" coords="5,379,152,405"/>
+<area shape="rect" id="node10" href="$EdicaoCallback_8hpp.html" title="Definição do estado de edição. " alt="" coords="489,379,628,405"/>
+<area shape="rect" id="node13" href="$Utils_8hpp.html" title="Utils.hpp" alt="" coords="851,229,925,256"/>
+<area shape="rect" id="node16" href="$BBox_8cpp.html" title="BBox.cpp" alt="" coords="973,155,1051,181"/>
+<area shape="rect" id="node17" href="$Transformacao_8hpp.html" title="Definição de Transformacao. " alt="" coords="590,80,725,107"/>
+<area shape="rect" id="node18" href="$Transformacao_8cpp.html" title="Transformacao.cpp" alt="" coords="641,155,775,181"/>
+<area shape="rect" id="node19" href="$Ponto_8cpp.html" title="Ponto.cpp" alt="" coords="1057,80,1138,107"/>
+<area shape="rect" id="node4" href="$Mundo_8hpp.html" title="Definição de Mundo par o Trabalho N3 de CG. " alt="" coords="409,229,495,256"/>
+<area shape="rect" id="node7" href="$AdicaoCallback_8hpp.html" title="Definição do estado de adição. " alt="" coords="225,379,364,405"/>
+<area shape="rect" id="node14" href="$ObjetoGrafico_8cpp.html" title="ObjetoGrafico.cpp" alt="" coords="753,304,879,331"/>
+<area shape="rect" id="node8" href="$AdicaoCallback_8cpp.html" title="AdicaoCallback.cpp" alt="" coords="239,453,377,480"/>
+<area shape="rect" id="node9" href="$Main_8cpp.html" title="Main.cpp" alt="" coords="415,453,489,480"/>
+<area shape="rect" id="node11" href="$EdicaoCallback_8cpp.html" title="EdicaoCallback.cpp" alt="" coords="555,453,693,480"/>
+<area shape="rect" id="node12" href="$Mundo_8cpp.html" title="Mundo.cpp" alt="" coords="642,304,729,331"/>
+<area shape="rect" id="node15" href="$Utils_8cpp.html" title="Utils.cpp" alt="" coords="955,304,1029,331"/>
+</map>

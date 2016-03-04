@@ -1,0 +1,228 @@
+\hypertarget{classObjetoGrafico}{\section{Objeto\+Grafico Class Reference}
+\label{classObjetoGrafico}\index{Objeto\+Grafico@{Objeto\+Grafico}}
+}
+
+
+Um Objeto Grafico do mundo.  
+
+
+
+
+{\ttfamily \#include $<$Objeto\+Grafico.\+hpp$>$}
+
+
+
+Collaboration diagram for Objeto\+Grafico\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=197pt]{classObjetoGrafico__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classObjetoGrafico_aa9f60661f56d401ea452d1f816baf383}{Objeto\+Grafico} ()
+\item 
+void \hyperlink{classObjetoGrafico_a5724b1222c13566c383ef45afe509c1d}{renderizar} () const 
+\item 
+void \hyperlink{classObjetoGrafico_a53501fa66c3e01b16cb3b779ce49b3f2}{adiciona\+Ponto} (const \hyperlink{classPonto}{Ponto} \&ponto)
+\item 
+void \hyperlink{classObjetoGrafico_ac497e31bacfc78ab649d0141037e2e53}{adiciona\+Ponto\+Falso} (const \hyperlink{classPonto}{Ponto} \&ponto)
+\item 
+void \hyperlink{classObjetoGrafico_af503f951d52a753e5d585aedfe7a786d}{remove\+Ponto\+Falso} ()
+\item 
+void \hyperlink{classObjetoGrafico_aa3fe40175c540687c2f5fdc3cfcaaa5e}{adiciona\+Objeto\+Filho} (const \hyperlink{classObjetoGrafico}{Objeto\+Grafico} \&objeto)
+\item 
+void \hyperlink{classObjetoGrafico_a30c749fe307eb77a071dee9c5afa6901}{set\+Cor} (const \hyperlink{classCor}{Cor} \&cor)
+\item 
+void \hyperlink{classObjetoGrafico_a3abe25ee87595137e261644901c5433e}{seleciona} ()
+\item 
+void \hyperlink{classObjetoGrafico_a8fbcf1515b4c000086a0869f883a2649}{deseleciona} ()
+\item 
+\hyperlink{classObjetoGrafico}{Objeto\+Grafico} $\ast$ \hyperlink{classObjetoGrafico_a0b0e6b4b843662542c4e26237bc13311}{objeto\+Selecionado} ()
+\item 
+void \hyperlink{classObjetoGrafico_a32858f0dd61d1d4fa2a3450650448b0a}{reseta\+Transformacao} ()
+\item 
+void \hyperlink{classObjetoGrafico_ae943811015ea3f95985803868de59387}{aplica\+Transformacao} (const \hyperlink{classTransformacao}{Transformacao} \&transformacao)
+\item 
+void \hyperlink{classObjetoGrafico_a878a53888cfcac3083f02188029f41a6}{muda\+Poligono\+Aberto\+Ou\+Fechado} ()
+\item 
+void \hyperlink{classObjetoGrafico_a1583cd9219737af248fd81255b388e08}{remove\+Ponto} (const \hyperlink{classPonto}{Ponto} \&ponto)
+\item 
+void \hyperlink{classObjetoGrafico_aef0874677507e0c6b9937fcce6d99e68}{remove\+Filho} (const \hyperlink{classObjetoGrafico}{Objeto\+Grafico} \&filho)
+\item 
+\hyperlink{classPonto}{Ponto} $\ast$ \hyperlink{classObjetoGrafico_aa0311d586a8a42b509e7275b803bfe20}{ponto\+Proximo} (const \hyperlink{classPonto}{Ponto} \&ponto)
+\item 
+void \hyperlink{classObjetoGrafico_a37bea7bf0a47e37db50a7d1c9bf83f4c}{redesenha\+B\+Box} ()
+\item 
+\hyperlink{classObjetoGrafico}{Objeto\+Grafico} $\ast$ \hyperlink{classObjetoGrafico_a5b64fd5743e6264ad112a274614739c3}{contem} (const \hyperlink{classPonto}{Ponto} \&ponto)
+\item 
+bool \hyperlink{classObjetoGrafico_aad0037b6a65530597ad19f22b08f4172}{operator==} (const \hyperlink{classObjetoGrafico}{Objeto\+Grafico} \&objeto)
+\item 
+\hyperlink{classPonto}{Ponto} \hyperlink{classObjetoGrafico_ad3f5691a4da67df86dfcdd8f7c904d47}{centro\+Objeto\+Grafico} () const 
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Um Objeto Grafico do mundo. 
+
+\begin{DoxyAuthor}{Author}
+Arthur Henrique Eggert 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2014-\/09-\/21
+\end{DoxyDate}
+Um Objeto Grafico que matem responsabilidade sobre sua cor, filhos, transformação e bbox 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classObjetoGrafico_aa9f60661f56d401ea452d1f816baf383}{\index{Objeto\+Grafico@{Objeto\+Grafico}!Objeto\+Grafico@{Objeto\+Grafico}}
+\index{Objeto\+Grafico@{Objeto\+Grafico}!Objeto\+Grafico@{Objeto\+Grafico}}
+\subsubsection[{Objeto\+Grafico}]{\setlength{\rightskip}{0pt plus 5cm}Objeto\+Grafico\+::\+Objeto\+Grafico (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classObjetoGrafico_aa9f60661f56d401ea452d1f816baf383}
+Cria um novo \hyperlink{classObjetoGrafico}{Objeto\+Grafico} 
+
+\subsection{Member Function Documentation}
+\hypertarget{classObjetoGrafico_aa3fe40175c540687c2f5fdc3cfcaaa5e}{\index{Objeto\+Grafico@{Objeto\+Grafico}!adiciona\+Objeto\+Filho@{adiciona\+Objeto\+Filho}}
+\index{adiciona\+Objeto\+Filho@{adiciona\+Objeto\+Filho}!Objeto\+Grafico@{Objeto\+Grafico}}
+\subsubsection[{adiciona\+Objeto\+Filho}]{\setlength{\rightskip}{0pt plus 5cm}void Objeto\+Grafico\+::adiciona\+Objeto\+Filho (
+\begin{DoxyParamCaption}
+\item[{const {\bf Objeto\+Grafico} \&}]{objeto}
+\end{DoxyParamCaption}
+)}}\label{classObjetoGrafico_aa3fe40175c540687c2f5fdc3cfcaaa5e}
+Adiciona um obejto filho ao objeto. \hypertarget{classObjetoGrafico_a53501fa66c3e01b16cb3b779ce49b3f2}{\index{Objeto\+Grafico@{Objeto\+Grafico}!adiciona\+Ponto@{adiciona\+Ponto}}
+\index{adiciona\+Ponto@{adiciona\+Ponto}!Objeto\+Grafico@{Objeto\+Grafico}}
+\subsubsection[{adiciona\+Ponto}]{\setlength{\rightskip}{0pt plus 5cm}void Objeto\+Grafico\+::adiciona\+Ponto (
+\begin{DoxyParamCaption}
+\item[{const {\bf Ponto} \&}]{ponto}
+\end{DoxyParamCaption}
+)}}\label{classObjetoGrafico_a53501fa66c3e01b16cb3b779ce49b3f2}
+Adiciona um ponto ao objeto \hypertarget{classObjetoGrafico_ac497e31bacfc78ab649d0141037e2e53}{\index{Objeto\+Grafico@{Objeto\+Grafico}!adiciona\+Ponto\+Falso@{adiciona\+Ponto\+Falso}}
+\index{adiciona\+Ponto\+Falso@{adiciona\+Ponto\+Falso}!Objeto\+Grafico@{Objeto\+Grafico}}
+\subsubsection[{adiciona\+Ponto\+Falso}]{\setlength{\rightskip}{0pt plus 5cm}void Objeto\+Grafico\+::adiciona\+Ponto\+Falso (
+\begin{DoxyParamCaption}
+\item[{const {\bf Ponto} \&}]{ponto}
+\end{DoxyParamCaption}
+)}}\label{classObjetoGrafico_ac497e31bacfc78ab649d0141037e2e53}
+Adiciona um ponto falso, assim o usuario pode ver o que ocorre ao adicionar este ponto \hypertarget{classObjetoGrafico_ae943811015ea3f95985803868de59387}{\index{Objeto\+Grafico@{Objeto\+Grafico}!aplica\+Transformacao@{aplica\+Transformacao}}
+\index{aplica\+Transformacao@{aplica\+Transformacao}!Objeto\+Grafico@{Objeto\+Grafico}}
+\subsubsection[{aplica\+Transformacao}]{\setlength{\rightskip}{0pt plus 5cm}void Objeto\+Grafico\+::aplica\+Transformacao (
+\begin{DoxyParamCaption}
+\item[{const {\bf Transformacao} \&}]{transformacao}
+\end{DoxyParamCaption}
+)}}\label{classObjetoGrafico_ae943811015ea3f95985803868de59387}
+Aplica um trnaformação \hypertarget{classObjetoGrafico_ad3f5691a4da67df86dfcdd8f7c904d47}{\index{Objeto\+Grafico@{Objeto\+Grafico}!centro\+Objeto\+Grafico@{centro\+Objeto\+Grafico}}
+\index{centro\+Objeto\+Grafico@{centro\+Objeto\+Grafico}!Objeto\+Grafico@{Objeto\+Grafico}}
+\subsubsection[{centro\+Objeto\+Grafico}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Ponto} Objeto\+Grafico\+::centro\+Objeto\+Grafico (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classObjetoGrafico_ad3f5691a4da67df86dfcdd8f7c904d47}
+O Centro do objeto grafico \hypertarget{classObjetoGrafico_a5b64fd5743e6264ad112a274614739c3}{\index{Objeto\+Grafico@{Objeto\+Grafico}!contem@{contem}}
+\index{contem@{contem}!Objeto\+Grafico@{Objeto\+Grafico}}
+\subsubsection[{contem}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Objeto\+Grafico} $\ast$ Objeto\+Grafico\+::contem (
+\begin{DoxyParamCaption}
+\item[{const {\bf Ponto} \&}]{ponto}
+\end{DoxyParamCaption}
+)}}\label{classObjetoGrafico_a5b64fd5743e6264ad112a274614739c3}
+Verifica se o ponto recebido esta dentro do objeto. \hypertarget{classObjetoGrafico_a8fbcf1515b4c000086a0869f883a2649}{\index{Objeto\+Grafico@{Objeto\+Grafico}!deseleciona@{deseleciona}}
+\index{deseleciona@{deseleciona}!Objeto\+Grafico@{Objeto\+Grafico}}
+\subsubsection[{deseleciona}]{\setlength{\rightskip}{0pt plus 5cm}void Objeto\+Grafico\+::deseleciona (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classObjetoGrafico_a8fbcf1515b4c000086a0869f883a2649}
+Deseleciona o Objeto Grafico \hypertarget{classObjetoGrafico_a878a53888cfcac3083f02188029f41a6}{\index{Objeto\+Grafico@{Objeto\+Grafico}!muda\+Poligono\+Aberto\+Ou\+Fechado@{muda\+Poligono\+Aberto\+Ou\+Fechado}}
+\index{muda\+Poligono\+Aberto\+Ou\+Fechado@{muda\+Poligono\+Aberto\+Ou\+Fechado}!Objeto\+Grafico@{Objeto\+Grafico}}
+\subsubsection[{muda\+Poligono\+Aberto\+Ou\+Fechado}]{\setlength{\rightskip}{0pt plus 5cm}void Objeto\+Grafico\+::muda\+Poligono\+Aberto\+Ou\+Fechado (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classObjetoGrafico_a878a53888cfcac3083f02188029f41a6}
+Muda a primitiva grafica para identificar um poligono aberto ou fechado \hypertarget{classObjetoGrafico_a0b0e6b4b843662542c4e26237bc13311}{\index{Objeto\+Grafico@{Objeto\+Grafico}!objeto\+Selecionado@{objeto\+Selecionado}}
+\index{objeto\+Selecionado@{objeto\+Selecionado}!Objeto\+Grafico@{Objeto\+Grafico}}
+\subsubsection[{objeto\+Selecionado}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Objeto\+Grafico} $\ast$ Objeto\+Grafico\+::objeto\+Selecionado (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classObjetoGrafico_a0b0e6b4b843662542c4e26237bc13311}
+Retorna o objeto selecionado, se ele ou um dos filhos estiver selecionado Retorna nullptr nos demais casos \hypertarget{classObjetoGrafico_aad0037b6a65530597ad19f22b08f4172}{\index{Objeto\+Grafico@{Objeto\+Grafico}!operator==@{operator==}}
+\index{operator==@{operator==}!Objeto\+Grafico@{Objeto\+Grafico}}
+\subsubsection[{operator==}]{\setlength{\rightskip}{0pt plus 5cm}bool Objeto\+Grafico\+::operator== (
+\begin{DoxyParamCaption}
+\item[{const {\bf Objeto\+Grafico} \&}]{objeto}
+\end{DoxyParamCaption}
+)}}\label{classObjetoGrafico_aad0037b6a65530597ad19f22b08f4172}
+Compara dois obejtos. \hypertarget{classObjetoGrafico_aa0311d586a8a42b509e7275b803bfe20}{\index{Objeto\+Grafico@{Objeto\+Grafico}!ponto\+Proximo@{ponto\+Proximo}}
+\index{ponto\+Proximo@{ponto\+Proximo}!Objeto\+Grafico@{Objeto\+Grafico}}
+\subsubsection[{ponto\+Proximo}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Ponto} $\ast$ Objeto\+Grafico\+::ponto\+Proximo (
+\begin{DoxyParamCaption}
+\item[{const {\bf Ponto} \&}]{ponto}
+\end{DoxyParamCaption}
+)}}\label{classObjetoGrafico_aa0311d586a8a42b509e7275b803bfe20}
+Retorna um ponto proximo ao ponto passado por parametro. \hypertarget{classObjetoGrafico_a37bea7bf0a47e37db50a7d1c9bf83f4c}{\index{Objeto\+Grafico@{Objeto\+Grafico}!redesenha\+B\+Box@{redesenha\+B\+Box}}
+\index{redesenha\+B\+Box@{redesenha\+B\+Box}!Objeto\+Grafico@{Objeto\+Grafico}}
+\subsubsection[{redesenha\+B\+Box}]{\setlength{\rightskip}{0pt plus 5cm}void Objeto\+Grafico\+::redesenha\+B\+Box (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classObjetoGrafico_a37bea7bf0a47e37db50a7d1c9bf83f4c}
+Redesenha a \hyperlink{classBBox}{B\+Box} quando um ponto do objeto foi alterado. \hypertarget{classObjetoGrafico_aef0874677507e0c6b9937fcce6d99e68}{\index{Objeto\+Grafico@{Objeto\+Grafico}!remove\+Filho@{remove\+Filho}}
+\index{remove\+Filho@{remove\+Filho}!Objeto\+Grafico@{Objeto\+Grafico}}
+\subsubsection[{remove\+Filho}]{\setlength{\rightskip}{0pt plus 5cm}void Objeto\+Grafico\+::remove\+Filho (
+\begin{DoxyParamCaption}
+\item[{const {\bf Objeto\+Grafico} \&}]{filho}
+\end{DoxyParamCaption}
+)}}\label{classObjetoGrafico_aef0874677507e0c6b9937fcce6d99e68}
+Remove o objeto filho igual ao recebido via parametro \hypertarget{classObjetoGrafico_a1583cd9219737af248fd81255b388e08}{\index{Objeto\+Grafico@{Objeto\+Grafico}!remove\+Ponto@{remove\+Ponto}}
+\index{remove\+Ponto@{remove\+Ponto}!Objeto\+Grafico@{Objeto\+Grafico}}
+\subsubsection[{remove\+Ponto}]{\setlength{\rightskip}{0pt plus 5cm}void Objeto\+Grafico\+::remove\+Ponto (
+\begin{DoxyParamCaption}
+\item[{const {\bf Ponto} \&}]{ponto}
+\end{DoxyParamCaption}
+)}}\label{classObjetoGrafico_a1583cd9219737af248fd81255b388e08}
+Remove o ponto recebido por paramentro \hypertarget{classObjetoGrafico_af503f951d52a753e5d585aedfe7a786d}{\index{Objeto\+Grafico@{Objeto\+Grafico}!remove\+Ponto\+Falso@{remove\+Ponto\+Falso}}
+\index{remove\+Ponto\+Falso@{remove\+Ponto\+Falso}!Objeto\+Grafico@{Objeto\+Grafico}}
+\subsubsection[{remove\+Ponto\+Falso}]{\setlength{\rightskip}{0pt plus 5cm}void Objeto\+Grafico\+::remove\+Ponto\+Falso (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classObjetoGrafico_af503f951d52a753e5d585aedfe7a786d}
+Remove o ultimo ponto falso. \hypertarget{classObjetoGrafico_a5724b1222c13566c383ef45afe509c1d}{\index{Objeto\+Grafico@{Objeto\+Grafico}!renderizar@{renderizar}}
+\index{renderizar@{renderizar}!Objeto\+Grafico@{Objeto\+Grafico}}
+\subsubsection[{renderizar}]{\setlength{\rightskip}{0pt plus 5cm}void Objeto\+Grafico\+::renderizar (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classObjetoGrafico_a5724b1222c13566c383ef45afe509c1d}
+Renderiza o obejto e seus filhos \hypertarget{classObjetoGrafico_a32858f0dd61d1d4fa2a3450650448b0a}{\index{Objeto\+Grafico@{Objeto\+Grafico}!reseta\+Transformacao@{reseta\+Transformacao}}
+\index{reseta\+Transformacao@{reseta\+Transformacao}!Objeto\+Grafico@{Objeto\+Grafico}}
+\subsubsection[{reseta\+Transformacao}]{\setlength{\rightskip}{0pt plus 5cm}void Objeto\+Grafico\+::reseta\+Transformacao (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classObjetoGrafico_a32858f0dd61d1d4fa2a3450650448b0a}
+Reseta a matriz de transformação do objeto \hypertarget{classObjetoGrafico_a3abe25ee87595137e261644901c5433e}{\index{Objeto\+Grafico@{Objeto\+Grafico}!seleciona@{seleciona}}
+\index{seleciona@{seleciona}!Objeto\+Grafico@{Objeto\+Grafico}}
+\subsubsection[{seleciona}]{\setlength{\rightskip}{0pt plus 5cm}void Objeto\+Grafico\+::seleciona (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classObjetoGrafico_a3abe25ee87595137e261644901c5433e}
+Seta o objeto como selecionado \hypertarget{classObjetoGrafico_a30c749fe307eb77a071dee9c5afa6901}{\index{Objeto\+Grafico@{Objeto\+Grafico}!set\+Cor@{set\+Cor}}
+\index{set\+Cor@{set\+Cor}!Objeto\+Grafico@{Objeto\+Grafico}}
+\subsubsection[{set\+Cor}]{\setlength{\rightskip}{0pt plus 5cm}void Objeto\+Grafico\+::set\+Cor (
+\begin{DoxyParamCaption}
+\item[{const {\bf Cor} \&}]{cor}
+\end{DoxyParamCaption}
+)}}\label{classObjetoGrafico_a30c749fe307eb77a071dee9c5afa6901}
+Seta a cor do Objeto Grafico. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{ObjetoGrafico_8hpp}{Objeto\+Grafico.\+hpp}\item 
+\hyperlink{ObjetoGrafico_8cpp}{Objeto\+Grafico.\+cpp}\end{DoxyCompactItemize}

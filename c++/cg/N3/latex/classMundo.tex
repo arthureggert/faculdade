@@ -1,0 +1,139 @@
+\hypertarget{classMundo}{\section{Mundo Class Reference}
+\label{classMundo}\index{Mundo@{Mundo}}
+}
+
+
+O Universo gráfico.  
+
+
+
+
+{\ttfamily \#include $<$Mundo.\+hpp$>$}
+
+
+
+Collaboration diagram for Mundo\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{classMundo__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classMundo_a425850071a4ead0edef44ffaa4e3d7d2}{Mundo} ()
+\item 
+void \hyperlink{classMundo_a1e5d427d26485ab7814cc559a3ae284d}{render} () const 
+\item 
+double \hyperlink{classMundo_a26788af3ad1edca991d40da2a6f2d577}{altura} () const 
+\item 
+double \hyperlink{classMundo_a384c4f3106d56abe23d08a6f267c076b}{largura} () const 
+\item 
+\hyperlink{classCamera}{Camera} \hyperlink{classMundo_ac89e4194871a994e169fb8dd32a191ed}{get\+Camera} ()
+\item 
+\hyperlink{classPonto}{Ponto} \hyperlink{classMundo_a20150531525b091d689b8f2fc1dd7cea}{normalizar} (int x, int y)
+\item 
+\hyperlink{classObjetoGrafico}{Objeto\+Grafico} $\ast$ \hyperlink{classMundo_a1d1dfa3384700b11fdbf34593f4e2115}{cria\+Objeto\+Grafico} ()
+\item 
+void \hyperlink{classMundo_aba8c427fe37a6b3ad82a95b726ce5a0c}{adiciona\+Objeto\+Grafico} ()
+\item 
+\hyperlink{classObjetoGrafico}{Objeto\+Grafico} $\ast$ \hyperlink{classMundo_a1c7df34ed7eee918781cdc956c199504}{objeto\+Grafico\+No\+Ponto} (const \hyperlink{classPonto}{Ponto} \&ponto)
+\item 
+void \hyperlink{classMundo_a63d93b69710062da89a50817952e77e4}{remover\+Objeto\+Grafico} (const \hyperlink{classObjetoGrafico}{Objeto\+Grafico} \&object)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+O Universo gráfico. 
+
+\begin{DoxyAuthor}{Author}
+Arthur Henrique Eggert 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2014-\/09-\/21
+\end{DoxyDate}
+O \hyperlink{classMundo}{Mundo} ou Universo Gráfico, mantem as informações sobre todos os Objetos\+Graficos e sobre a \hyperlink{classCamera}{Camera} 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classMundo_a425850071a4ead0edef44ffaa4e3d7d2}{\index{Mundo@{Mundo}!Mundo@{Mundo}}
+\index{Mundo@{Mundo}!Mundo@{Mundo}}
+\subsubsection[{Mundo}]{\setlength{\rightskip}{0pt plus 5cm}Mundo\+::\+Mundo (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classMundo_a425850071a4ead0edef44ffaa4e3d7d2}
+Cria um novo \hyperlink{classMundo}{Mundo} gráfico 
+
+\subsection{Member Function Documentation}
+\hypertarget{classMundo_aba8c427fe37a6b3ad82a95b726ce5a0c}{\index{Mundo@{Mundo}!adiciona\+Objeto\+Grafico@{adiciona\+Objeto\+Grafico}}
+\index{adiciona\+Objeto\+Grafico@{adiciona\+Objeto\+Grafico}!Mundo@{Mundo}}
+\subsubsection[{adiciona\+Objeto\+Grafico}]{\setlength{\rightskip}{0pt plus 5cm}void Mundo\+::adiciona\+Objeto\+Grafico (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classMundo_aba8c427fe37a6b3ad82a95b726ce5a0c}
+Adiciona o rascunho a lista de objetos graficos \hypertarget{classMundo_a26788af3ad1edca991d40da2a6f2d577}{\index{Mundo@{Mundo}!altura@{altura}}
+\index{altura@{altura}!Mundo@{Mundo}}
+\subsubsection[{altura}]{\setlength{\rightskip}{0pt plus 5cm}double Mundo\+::altura (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classMundo_a26788af3ad1edca991d40da2a6f2d577}
+A altura do mundo \hypertarget{classMundo_a1d1dfa3384700b11fdbf34593f4e2115}{\index{Mundo@{Mundo}!cria\+Objeto\+Grafico@{cria\+Objeto\+Grafico}}
+\index{cria\+Objeto\+Grafico@{cria\+Objeto\+Grafico}!Mundo@{Mundo}}
+\subsubsection[{cria\+Objeto\+Grafico}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Objeto\+Grafico} $\ast$ Mundo\+::cria\+Objeto\+Grafico (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classMundo_a1d1dfa3384700b11fdbf34593f4e2115}
+Cria um novo rascunho de \hyperlink{classObjetoGrafico}{Objeto\+Grafico} e retorna o mesmo. \hypertarget{classMundo_ac89e4194871a994e169fb8dd32a191ed}{\index{Mundo@{Mundo}!get\+Camera@{get\+Camera}}
+\index{get\+Camera@{get\+Camera}!Mundo@{Mundo}}
+\subsubsection[{get\+Camera}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Camera} Mundo\+::get\+Camera (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classMundo_ac89e4194871a994e169fb8dd32a191ed}
+Retona a camera do mundo \hypertarget{classMundo_a384c4f3106d56abe23d08a6f267c076b}{\index{Mundo@{Mundo}!largura@{largura}}
+\index{largura@{largura}!Mundo@{Mundo}}
+\subsubsection[{largura}]{\setlength{\rightskip}{0pt plus 5cm}double Mundo\+::largura (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classMundo_a384c4f3106d56abe23d08a6f267c076b}
+A largura do mundo \hypertarget{classMundo_a20150531525b091d689b8f2fc1dd7cea}{\index{Mundo@{Mundo}!normalizar@{normalizar}}
+\index{normalizar@{normalizar}!Mundo@{Mundo}}
+\subsubsection[{normalizar}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Ponto} Mundo\+::normalizar (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)}}\label{classMundo_a20150531525b091d689b8f2fc1dd7cea}
+Normaliza um ponto de acordo com o tamanho da tela e o zoom da camera. \hypertarget{classMundo_a1c7df34ed7eee918781cdc956c199504}{\index{Mundo@{Mundo}!objeto\+Grafico\+No\+Ponto@{objeto\+Grafico\+No\+Ponto}}
+\index{objeto\+Grafico\+No\+Ponto@{objeto\+Grafico\+No\+Ponto}!Mundo@{Mundo}}
+\subsubsection[{objeto\+Grafico\+No\+Ponto}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Objeto\+Grafico} $\ast$ Mundo\+::objeto\+Grafico\+No\+Ponto (
+\begin{DoxyParamCaption}
+\item[{const {\bf Ponto} \&}]{ponto}
+\end{DoxyParamCaption}
+)}}\label{classMundo_a1c7df34ed7eee918781cdc956c199504}
+Retorna o objeto grafico sobre um determinado ponto. Pode retorna um nullptr se nenhum objeto estiver selecionado \hypertarget{classMundo_a63d93b69710062da89a50817952e77e4}{\index{Mundo@{Mundo}!remover\+Objeto\+Grafico@{remover\+Objeto\+Grafico}}
+\index{remover\+Objeto\+Grafico@{remover\+Objeto\+Grafico}!Mundo@{Mundo}}
+\subsubsection[{remover\+Objeto\+Grafico}]{\setlength{\rightskip}{0pt plus 5cm}void Mundo\+::remover\+Objeto\+Grafico (
+\begin{DoxyParamCaption}
+\item[{const {\bf Objeto\+Grafico} \&}]{object}
+\end{DoxyParamCaption}
+)}}\label{classMundo_a63d93b69710062da89a50817952e77e4}
+Remove o objeto grafico passado por paramentro \hypertarget{classMundo_a1e5d427d26485ab7814cc559a3ae284d}{\index{Mundo@{Mundo}!render@{render}}
+\index{render@{render}!Mundo@{Mundo}}
+\subsubsection[{render}]{\setlength{\rightskip}{0pt plus 5cm}void Mundo\+::render (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classMundo_a1e5d427d26485ab7814cc559a3ae284d}
+Renderiza todos os objetosgraficos da cena 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Mundo_8hpp}{Mundo.\+hpp}\item 
+\hyperlink{Mundo_8cpp}{Mundo.\+cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,15 @@
+<map id="Camera.hpp" name="Camera.hpp">
+<area shape="rect" id="node2" href="$Mundo_8hpp.html" title="Definição de Mundo par o Trabalho N3 de CG. " alt="" coords="326,80,413,107"/>
+<area shape="rect" id="node11" href="$Camera_8cpp.html" title="Camera.cpp" alt="" coords="790,80,883,107"/>
+<area shape="rect" id="node12" href="$Utils_8hpp.html" title="Utils.hpp" alt="" coords="691,80,766,107"/>
+<area shape="rect" id="node3" href="$AbstractCallback_8hpp.html" title="Definição abstrata da classe da aplicação. " alt="" coords="186,155,332,181"/>
+<area shape="rect" id="node4" href="$AbstractCallback_8cpp.html" title="AbstractCallback.cpp" alt="" coords="22,229,168,256"/>
+<area shape="rect" id="node5" href="$AdicaoCallback_8hpp.html" title="Definição do estado de adição. " alt="" coords="192,229,331,256"/>
+<area shape="rect" id="node6" href="$AdicaoCallback_8cpp.html" title="AdicaoCallback.cpp" alt="" coords="42,304,180,331"/>
+<area shape="rect" id="node7" href="$Main_8cpp.html" title="Main.cpp" alt="" coords="331,304,406,331"/>
+<area shape="rect" id="node8" href="$EdicaoCallback_8hpp.html" title="Definição do estado de edição. " alt="" coords="406,229,544,256"/>
+<area shape="rect" id="node9" href="$EdicaoCallback_8cpp.html" title="EdicaoCallback.cpp" alt="" coords="471,304,610,331"/>
+<area shape="rect" id="node10" href="$Mundo_8cpp.html" title="Mundo.cpp" alt="" coords="620,155,706,181"/>
+<area shape="rect" id="node13" href="$ObjetoGrafico_8cpp.html" title="ObjetoGrafico.cpp" alt="" coords="730,155,857,181"/>
+<area shape="rect" id="node14" href="$Utils_8cpp.html" title="Utils.cpp" alt="" coords="882,155,956,181"/>
+</map>

@@ -1,0 +1,124 @@
+\hypertarget{classAdicaoCallback}{\section{Adicao\+Callback Class Reference}
+\label{classAdicaoCallback}\index{Adicao\+Callback@{Adicao\+Callback}}
+}
+
+
+Estado da aplicação com relação aos momentos de adição.  
+
+
+
+
+{\ttfamily \#include $<$Adicao\+Callback.\+hpp$>$}
+
+
+
+Inheritance diagram for Adicao\+Callback\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=193pt]{classAdicaoCallback__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Adicao\+Callback\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classAdicaoCallback__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classAdicaoCallback_a7576b50f747918fcfe1ecbb41ecd0326}{Adicao\+Callback} (\hyperlink{classMundo}{Mundo} \&\hyperlink{classAbstractCallback_a17c2460462c7e985368ef227338d3430}{mundo})
+\item 
+virtual void \hyperlink{classAdicaoCallback_a1161a0292e30660bbc653dd830ed7e78}{keyboard} (unsigned char key, const \hyperlink{classPonto}{Ponto} \&point)
+\item 
+virtual void \hyperlink{classAdicaoCallback_ac1a328393245c840b20bd78535786aad}{mouse} (int button, int state, const \hyperlink{classPonto}{Ponto} \&point)
+\item 
+virtual void \hyperlink{classAdicaoCallback_a4fe49be2210d8b9ef60421e9e0c517bf}{movimento\+Mouse} (const \hyperlink{classPonto}{Ponto} \&point)
+\item 
+virtual void \hyperlink{classAdicaoCallback_adf5c6d3c487342ea989b7716db834684}{special} (int key, const \hyperlink{classPonto}{Ponto} \&point)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Estado da aplicação com relação aos momentos de adição. 
+
+\begin{DoxyAuthor}{Author}
+Arthur Henrique Eggert 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2014-\/09-\/21 
+\end{DoxyDate}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classAdicaoCallback_a7576b50f747918fcfe1ecbb41ecd0326}{\index{Adicao\+Callback@{Adicao\+Callback}!Adicao\+Callback@{Adicao\+Callback}}
+\index{Adicao\+Callback@{Adicao\+Callback}!Adicao\+Callback@{Adicao\+Callback}}
+\subsubsection[{Adicao\+Callback}]{\setlength{\rightskip}{0pt plus 5cm}Adicao\+Callback\+::\+Adicao\+Callback (
+\begin{DoxyParamCaption}
+\item[{{\bf Mundo} \&}]{mundo}
+\end{DoxyParamCaption}
+)}}\label{classAdicaoCallback_a7576b50f747918fcfe1ecbb41ecd0326}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classAdicaoCallback_a1161a0292e30660bbc653dd830ed7e78}{\index{Adicao\+Callback@{Adicao\+Callback}!keyboard@{keyboard}}
+\index{keyboard@{keyboard}!Adicao\+Callback@{Adicao\+Callback}}
+\subsubsection[{keyboard}]{\setlength{\rightskip}{0pt plus 5cm}void Adicao\+Callback\+::keyboard (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{key, }
+\item[{const {\bf Ponto} \&}]{point}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classAdicaoCallback_a1161a0292e30660bbc653dd830ed7e78}
+Callback de Teclado 
+
+Reimplemented from \hyperlink{classAbstractCallback_af897d4ee16944785ddb2d90ffad155b2}{Abstract\+Callback}.
+
+\hypertarget{classAdicaoCallback_ac1a328393245c840b20bd78535786aad}{\index{Adicao\+Callback@{Adicao\+Callback}!mouse@{mouse}}
+\index{mouse@{mouse}!Adicao\+Callback@{Adicao\+Callback}}
+\subsubsection[{mouse}]{\setlength{\rightskip}{0pt plus 5cm}void Adicao\+Callback\+::mouse (
+\begin{DoxyParamCaption}
+\item[{int}]{button, }
+\item[{int}]{state, }
+\item[{const {\bf Ponto} \&}]{point}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classAdicaoCallback_ac1a328393245c840b20bd78535786aad}
+Callback de Mouse 
+
+Implements \hyperlink{classAbstractCallback_a1c30a14b8f6212712152364a6620760d}{Abstract\+Callback}.
+
+\hypertarget{classAdicaoCallback_a4fe49be2210d8b9ef60421e9e0c517bf}{\index{Adicao\+Callback@{Adicao\+Callback}!movimento\+Mouse@{movimento\+Mouse}}
+\index{movimento\+Mouse@{movimento\+Mouse}!Adicao\+Callback@{Adicao\+Callback}}
+\subsubsection[{movimento\+Mouse}]{\setlength{\rightskip}{0pt plus 5cm}void Adicao\+Callback\+::movimento\+Mouse (
+\begin{DoxyParamCaption}
+\item[{const {\bf Ponto} \&}]{ponto}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classAdicaoCallback_a4fe49be2210d8b9ef60421e9e0c517bf}
+Callback do movimento de mouse 
+
+Implements \hyperlink{classAbstractCallback_a6a13a67f479eb87c0416d1464b8ef37a}{Abstract\+Callback}.
+
+\hypertarget{classAdicaoCallback_adf5c6d3c487342ea989b7716db834684}{\index{Adicao\+Callback@{Adicao\+Callback}!special@{special}}
+\index{special@{special}!Adicao\+Callback@{Adicao\+Callback}}
+\subsubsection[{special}]{\setlength{\rightskip}{0pt plus 5cm}void Adicao\+Callback\+::special (
+\begin{DoxyParamCaption}
+\item[{int}]{key, }
+\item[{const {\bf Ponto} \&}]{point}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classAdicaoCallback_adf5c6d3c487342ea989b7716db834684}
+Calbback para teclas especias do teclado 
+
+Implements \hyperlink{classAbstractCallback_a92270c46a72e1b36f8ad72a26f7c37dd}{Abstract\+Callback}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{AdicaoCallback_8hpp}{Adicao\+Callback.\+hpp}\item 
+\hyperlink{AdicaoCallback_8cpp}{Adicao\+Callback.\+cpp}\end{DoxyCompactItemize}

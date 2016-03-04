@@ -1,0 +1,137 @@
+\hypertarget{classTransformacao}{\section{Transformacao Class Reference}
+\label{classTransformacao}\index{Transformacao@{Transformacao}}
+}
+
+
+Uma transformação linear.  
+
+
+
+
+{\ttfamily \#include $<$Transformacao.\+hpp$>$}
+
+
+
+Collaboration diagram for Transformacao\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=177pt]{classTransformacao__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classTransformacao_adc00d479b7c2d8d9ef56afe73cb74166}{Transformacao} ()
+\item 
+const double $\ast$ \hyperlink{classTransformacao_aab2c57d993cf832dd1dff8138dd263d9}{get\+Data} () const 
+\item 
+\hyperlink{classPonto}{Ponto} \hyperlink{classTransformacao_aadc2790209427a9f25df5b9f27f3ac2e}{operator$\ast$} (const \hyperlink{classPonto}{Ponto} \&ponto) const 
+\item 
+\hyperlink{classTransformacao}{Transformacao} \hyperlink{classTransformacao_accd6d52cc574f4d564323a84fe0c372a}{operator$\ast$} (const \hyperlink{classTransformacao}{Transformacao} \&rhs) const 
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classTransformacao}{Transformacao} \hyperlink{classTransformacao_a1e053f30d9579a5097d44e28de8a2f50}{translacao} (const \hyperlink{classPonto}{Ponto} \&translacao)
+\item 
+static \hyperlink{classTransformacao}{Transformacao} \hyperlink{classTransformacao_ae8d4d7d168f6dffdfad3f2a4d8ab4139}{escala} (double fator\+De\+X, double fator\+De\+Y, double fator\+De\+Z)
+\item 
+static \hyperlink{classTransformacao}{Transformacao} \hyperlink{classTransformacao_ab2a54c87392575303f4556abb63ea2b3}{x\+Rotacao} (double rad)
+\item 
+static \hyperlink{classTransformacao}{Transformacao} \hyperlink{classTransformacao_ae0748337141afe84542995a7e1fb4f1a}{y\+Rotacao} (double rad)
+\item 
+static \hyperlink{classTransformacao}{Transformacao} \hyperlink{classTransformacao_a3a47b2094d2da2b8c3673defbaa40b2a}{z\+Rotacao} (double rad)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Uma transformação linear. 
+
+\begin{DoxyAuthor}{Author}
+Arthur Henrique Eggert 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2014-\/09-\/21
+\end{DoxyDate}
+Uma transformacao linear usada para transladar, rotacioar ou escalar um objeto grafico. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classTransformacao_adc00d479b7c2d8d9ef56afe73cb74166}{\index{Transformacao@{Transformacao}!Transformacao@{Transformacao}}
+\index{Transformacao@{Transformacao}!Transformacao@{Transformacao}}
+\subsubsection[{Transformacao}]{\setlength{\rightskip}{0pt plus 5cm}Transformacao\+::\+Transformacao (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classTransformacao_adc00d479b7c2d8d9ef56afe73cb74166}
+Cria uma transformação 
+
+\subsection{Member Function Documentation}
+\hypertarget{classTransformacao_ae8d4d7d168f6dffdfad3f2a4d8ab4139}{\index{Transformacao@{Transformacao}!escala@{escala}}
+\index{escala@{escala}!Transformacao@{Transformacao}}
+\subsubsection[{escala}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Transformacao} Transformacao\+::escala (
+\begin{DoxyParamCaption}
+\item[{double}]{fator\+De\+X, }
+\item[{double}]{fator\+De\+Y, }
+\item[{double}]{fator\+De\+Z}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classTransformacao_ae8d4d7d168f6dffdfad3f2a4d8ab4139}
+
+\begin{DoxyItemize}
+\item Cria um transformação de escala 
+\end{DoxyItemize}\hypertarget{classTransformacao_aab2c57d993cf832dd1dff8138dd263d9}{\index{Transformacao@{Transformacao}!get\+Data@{get\+Data}}
+\index{get\+Data@{get\+Data}!Transformacao@{Transformacao}}
+\subsubsection[{get\+Data}]{\setlength{\rightskip}{0pt plus 5cm}const double $\ast$ Transformacao\+::get\+Data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classTransformacao_aab2c57d993cf832dd1dff8138dd263d9}
+Retorna os dados da trnaforação como um array de double \hypertarget{classTransformacao_aadc2790209427a9f25df5b9f27f3ac2e}{\index{Transformacao@{Transformacao}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!Transformacao@{Transformacao}}
+\subsubsection[{operator$\ast$}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Ponto} Transformacao\+::operator$\ast$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Ponto} \&}]{ponto}
+\end{DoxyParamCaption}
+) const}}\label{classTransformacao_aadc2790209427a9f25df5b9f27f3ac2e}
+Aplica a transofmração em um ponto. \hypertarget{classTransformacao_accd6d52cc574f4d564323a84fe0c372a}{\index{Transformacao@{Transformacao}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!Transformacao@{Transformacao}}
+\subsubsection[{operator$\ast$}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Transformacao} Transformacao\+::operator$\ast$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Transformacao} \&}]{rhs}
+\end{DoxyParamCaption}
+) const}}\label{classTransformacao_accd6d52cc574f4d564323a84fe0c372a}
+Multiplica duas transformações \hypertarget{classTransformacao_a1e053f30d9579a5097d44e28de8a2f50}{\index{Transformacao@{Transformacao}!translacao@{translacao}}
+\index{translacao@{translacao}!Transformacao@{Transformacao}}
+\subsubsection[{translacao}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Transformacao} Transformacao\+::translacao (
+\begin{DoxyParamCaption}
+\item[{const {\bf Ponto} \&}]{translacao}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classTransformacao_a1e053f30d9579a5097d44e28de8a2f50}
+Cria um transformação de translação \hypertarget{classTransformacao_ab2a54c87392575303f4556abb63ea2b3}{\index{Transformacao@{Transformacao}!x\+Rotacao@{x\+Rotacao}}
+\index{x\+Rotacao@{x\+Rotacao}!Transformacao@{Transformacao}}
+\subsubsection[{x\+Rotacao}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Transformacao} Transformacao\+::x\+Rotacao (
+\begin{DoxyParamCaption}
+\item[{double}]{rad}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classTransformacao_ab2a54c87392575303f4556abb63ea2b3}
+Cria um transformação de rotaçao no eixo X \hypertarget{classTransformacao_ae0748337141afe84542995a7e1fb4f1a}{\index{Transformacao@{Transformacao}!y\+Rotacao@{y\+Rotacao}}
+\index{y\+Rotacao@{y\+Rotacao}!Transformacao@{Transformacao}}
+\subsubsection[{y\+Rotacao}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Transformacao} Transformacao\+::y\+Rotacao (
+\begin{DoxyParamCaption}
+\item[{double}]{rad}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classTransformacao_ae0748337141afe84542995a7e1fb4f1a}
+Cria um transformação de rotaçao no eixo Y \hypertarget{classTransformacao_a3a47b2094d2da2b8c3673defbaa40b2a}{\index{Transformacao@{Transformacao}!z\+Rotacao@{z\+Rotacao}}
+\index{z\+Rotacao@{z\+Rotacao}!Transformacao@{Transformacao}}
+\subsubsection[{z\+Rotacao}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Transformacao} Transformacao\+::z\+Rotacao (
+\begin{DoxyParamCaption}
+\item[{double}]{rad}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classTransformacao_a3a47b2094d2da2b8c3673defbaa40b2a}
+Cria um transformação de rotaçao no eixo Z 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Transformacao_8hpp}{Transformacao.\+hpp}\item 
+\hyperlink{Transformacao_8cpp}{Transformacao.\+cpp}\end{DoxyCompactItemize}
