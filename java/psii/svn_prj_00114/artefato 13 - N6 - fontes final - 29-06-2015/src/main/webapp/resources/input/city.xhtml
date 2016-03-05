@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core" xmlns:ui="http://xmlns.jcp.org/jsf/facelets" xmlns:p="http://primefaces.org/ui"
+	xmlns:pe="http://primefaces.org/ui/extensions" xmlns:cc="http://xmlns.jcp.org/jsf/composite"
+	xmlns:ps="http://xmlns.jcp.org/jsf/passthrough">
+
+<cc:interface>
+	<cc:attribute name="idInterno" required="true" />
+	<cc:attribute name="bundle" required="true" />
+	<cc:attribute name="value" required="true" />
+</cc:interface>
+
+<cc:implementation>
+	<div class="form-group">
+		<label class="col-xs-2 control-label" for="#{cc.attrs.idInterno}">#{cc.attrs.bundle}</label>
+		<div class="col-xs-10">
+			<p:autoComplete id="#{cc.attrs.idInterno}" forceSelection="true" value="#{cc.attrs.value}"
+				completeMethod="#{cityController.findByName}" var="city" itemLabel="#{city.name}" itemValue="#{city}"
+				converter="CITYConverter" ps:placeholder="#{cc.attrs.bundle}">
+			</p:autoComplete>
+			<span class="help-block"> <h:message for="#{cc.attrs.idInterno}" errorClass="invalid" />
+			</span>
+		</div>
+	</div>
+</cc:implementation>
+</html>

@@ -1,0 +1,14 @@
+module corba {
+
+	struct Acao {
+		long idAcao;
+		long qtdNegocios;
+		long codigoEmpresa;
+	};
+
+  interface AcaoDAO {
+      Acao criaAcao(in string codigoEmpresa);
+      Acao buscaAcap(in string codigoEmpresa);
+      void criaMovimentacaoAcao(in Acao acao , in string tipo);
+	};
+};

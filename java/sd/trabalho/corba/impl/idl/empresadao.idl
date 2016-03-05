@@ -1,0 +1,16 @@
+module corba {
+
+	struct Empresa {
+		string nome;
+		string sigla;
+	};
+
+	interface EmpresaDAO {
+		void cadastraEmpresa(in Empresa emp);
+		boolean isEmpresaCadastrada(in Empresa emp);
+	};
+
+
+
+
+};

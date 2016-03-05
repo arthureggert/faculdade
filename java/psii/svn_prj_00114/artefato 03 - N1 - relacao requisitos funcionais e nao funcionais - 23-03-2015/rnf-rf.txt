@@ -1,0 +1,19 @@
+RF01: O sistema deve permitir ao usuário efetuar o login.
+RF02: O sistema deve permitir ao usuário cadastrar fornecedores. 
+RF03: O sistema deve permitir ao usuário cadastrar clientes.
+RF04: O sistema deve permitir ao usuário cadastrar usuários.
+RF05: O sistema deve permitir ao usuário cadastrar as informações da empresa.
+RF06: O sistema deve permitir ao usuário cadastrar formas de pagamento.
+RF07: O sistema deve permitir ao usuário cadastrar contas bancárias.
+RF08: O sistema deve permitir ao usuário incluir lançamentos de contas a receber.
+RF09: O sistema deve permitir ao usuário realizar a baixa de contas a receber.
+RF10: O sistema deve permitir ao usuário incluir lançamentos de contas a pagar.
+RF11: O sistema deve permitir ao usuário realizar a baixa de contas a pagar.
+RF12: O sistema deve permitir ao usuário gerar relatórios com os lançamentos e baixas de contas a receber.
+RF13: O sistema deve permitir ao usuário gerar relatórios com os lançamentos e baixas de contas a pagar.
+
+RNF01: O sistema deve ser desenvolvido na linguagem Java.
+RNF02: O sistema deve utilizar banco de dados MySQL.
+RNF03: O sistema deve ser acessível pelos navegadores Mozilla Firefox 3.0 ou versão superior e Google Chrome 5.0.
+RNF04: O sistema deve ter uma interface de fácil utilização pelo usuário.
+RNF05: O sistema deve funcionar via web. 

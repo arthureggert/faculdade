@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ps="http://xmlns.jcp.org/jsf/passthrough" xmlns:in="http://xmlns.jcp.org/jsf/composite/input"
+	template="/WEB-INF/templates/master.xhtml">
+	<ui:define name="content">
+		<f:metadata>
+			<f:viewParam name="firm" value="#{firmController.firm}" converter="#{firmConvertor}" />
+			<f:event listener="#{firmController.preRenderView()}" type="preRenderView" />
+		</f:metadata>
+
+		<in:contentheaderremove title="#{bundle['firm.title']}" />
+
+		<section class="content">
+			<h:form id="form" ps:role="form" styleClass="form-horizontal">
+				<div class="box box-primary">
+					<in:boxheader title="#{bundle['firm.title']}" />
+					<div class="box-body">
+						<p>Deseja deletar o registro selecionado?</p>
+						<p>#{firmController.firm.name}</p>
+						<div class="box-footer">
+							<div class="row">
+								<div class="pull-left col-xs-2">
+									<h:commandButton id="register" action="#{firmController.delete()}" value="#{bundle['crud.operacao.excluir']}"
+										styleClass="btn btn-block btn-danger btn-flat" />
+									<h:messages globalOnly="true" infoClass="invalid" />
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</h:form>
+		</section>
+	</ui:define>
+</ui:composition>

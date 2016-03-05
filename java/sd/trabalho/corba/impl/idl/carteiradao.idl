@@ -1,0 +1,20 @@
+module corba {
+
+	struct Carteira {
+		long idAcao;
+		double valorReal;
+	};
+
+	struct Acao {
+    	long idAcao;
+    	long qtdNegocios;
+    	long codigoEmpresa;
+    };
+
+  interface CarteiraDAO {
+      Carteira criaCarteira(in string nomeUsuario);
+      Carteira buscaCarteira(in string nomeUsuario);
+      void criaMovimentacaoCarteira(in Acao acao , in Carteira carteira, in double valor , in double qtd , in string tipo);
+      boolean isAcaoComprada(in Acao acao , in Carteira carteira, in long qtd);
+	};
+};

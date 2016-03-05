@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html"
+	template="/WEB-INF/templates/master.xhtml" xmlns:ps="http://xmlns.jcp.org/jsf/passthrough"
+	xmlns:in="http://xmlns.jcp.org/jsf/composite/input" xmlns:p="http://primefaces.org/ui">
+	<ui:define name="content">
+		<f:metadata>
+			<f:viewParam name="bankAccount" value="#{bankAccountController.bankAccount}" converter="#{bankAccountConvertor}" />
+			<f:event listener="#{bankAccountController.preRenderView()}" type="preRenderView" />
+		</f:metadata>
+
+		<in:contentheaderedit new="#{bankAccountController.new}" title="#{bundle['bank.title']}" />
+
+		<section class="content">
+			<h:form id="form" ps:role="form" styleClass="form-horizontal">
+				<div class="box box-primary">
+					<in:boxheader title="#{bundle['bank.title']}" />
+					<div class="box-body">
+						<fieldset>
+							<in:default idInterno="number" bundle="#{bundle['bankAccount.number']}"
+								value="#{bankAccountController.bankAccount.accountNumber}" />
+
+							<in:default idInterno="agencynumber" bundle="#{bundle['bankAccount.agencynumber']}"
+								value="#{bankAccountController.bankAccount.agencyNumber}" />
+
+							<in:bank idInterno="bankinput" bundle="#{bundle['bank.title']}" value="#{bankAccountController.bankAccount.bank}" />
+
+							<in:number idInterno="openingbalance" bundle="#{bundle['bankAccount.openingBalance']}"
+								value="#{bankAccountController.bankAccount.openingBalance}" />
+
+							<in:default idInterno="description" bundle="#{bundle['bankAccount.description']}"
+								value="#{bankAccountController.bankAccount.description}" />
+
+						</fieldset>
+
+						<div class="box-footer">
+							<div class="row">
+								<div class="pull-left col-xs-2">
+									<h:commandButton id="register" action="#{bankAccountController.save()}"
+										value="#{bundle['crud.operacao.salvar']}" styleClass="btn btn-block btn-primary btn-flat" />
+									<h:messages globalOnly="true" infoClass="invalid" />
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</h:form>
+		</section>
+	</ui:define>
+</ui:composition>

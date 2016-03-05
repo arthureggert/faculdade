@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core" xmlns:ui="http://xmlns.jcp.org/jsf/facelets" xmlns:p="http://primefaces.org/ui"
+	xmlns:b="http://bootsfaces.net/ui" xmlns:ps="http://xmlns.jcp.org/jsf/passthrough">
+<h:body styleClass="skin-blue">
+	<div class="wrapper">
+		<ui:composition template="templates/master.xhtml">
+			<ui:define name="content">
+				<p:outputLabel value="PRIMEFACES RULES" styleClass="hidden" />
+				<div class="box-body">
+					<p:dataTable value="#{employeeController.allEmployees}" var="e" id="employeesTable">
+						<p:column id="employeeUsername">
+							<h:outputText value="#{employeeService.getUserForEmployee(e).loginName}" />
+						</p:column>
+
+						<p:column id="employeeName" >
+							<h:outputText value="#{e.fullName}" />
+						</p:column>
+
+						<p:column id="employeeEmail">
+							<h:outputText value="#{e.email}" />
+						</p:column>
+
+						<p:column id="employeeBankAccount">
+							<h:outputText value="#{e.bankAccount}" />
+						</p:column>
+
+						<p:column id="employeeAction">
+							<h:commandButton action="#{employeeController.edit(e)}" value="Edit" id="editEmployeeBtn" />
+						</p:column>
+					</p:dataTable>
+				</div>
+			</ui:define>
+		</ui:composition>
+	</div>
+</h:body>
+</html>

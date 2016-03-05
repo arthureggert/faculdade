@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core" xmlns:ui="http://xmlns.jcp.org/jsf/facelets" xmlns:p="http://primefaces.org/ui"
+	xmlns:b="http://bootsfaces.net/ui" xmlns:ps="http://xmlns.jcp.org/jsf/passthrough"
+	xmlns:pe="http://primefaces.org/ui/extensions">
+<body>
+	<ui:composition>
+		<span class="logo"> <b>Financeiro</b> WEB
+		</span>
+
+		<nav class="navbar navbar-static-top" role="navigation">
+			<a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button"> <span class="sr-only">Toggle
+					navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+			</a>
+			<div class="navbar-custom-menu">
+				<ul class="nav navbar-nav">
+					<li class="dropdown user user-menu"><a href="#" class="dropdown-toggle" data-toggle="dropdown"> <!-- 							<img src="../../dist/img/user2-160x160.jpg" class="user-image" alt="User Image" /> -->
+							<span class="hidden-xs">#{memberSession.member.name}</span>
+					</a>
+						<ul class="dropdown-menu">
+							<li class="user-header">
+								<!-- 								<img src="../../dist/img/user2-160x160.jpg" class="img-circle" alt="User Image" /> -->
+								<p>
+									#{memberSession.member.name} - #{memberSession.member.role.descricao} <small>#{memberSession.member.phoneNumber}</small>
+								</p>
+							</li>
+							<li class="user-footer">
+								<div class="pull-right">
+									<h:form>
+										<p:commandButton styleClass="btn btn-default btn-flat" value="#{bundle['login.sair']}"
+											action="#{identity.logout()}" />
+									</h:form>
+								</div>
+							</li>
+						</ul></li>
+				</ul>
+			</div>
+		</nav>
+	</ui:composition>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:cs="http://xmlns.jcp.org/jsf/composite/input" xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets" xmlns:p="http://primefaces.org/ui" xmlns:b="http://bootsfaces.net/ui"
+	xmlns:ps="http://xmlns.jcp.org/jsf/passthrough">
+<h:body styleClass="skin-blue">
+	<div class="wrapper">
+		<ui:composition template="/WEB-INF/templates/master.xhtml">
+			<ui:define name="content">
+				<cs:contentheader title="#{bundle['firm.title']}" />
+
+				<section class="content">
+
+					<div class="box box-primary">
+						<cs:boxheader title="#{bundle['firm.title']}" />
+						<div class="box-body">
+							<h:form id="form">
+								<p:dataTable value="#{firms}" var="firm" id="table">
+									<p:column id="name" headerText="#{bundle['geral.nome']}">
+										<h:outputText value="#{firm.name}" />
+									</p:column>
+									<p:column id="cnpj" headerText="#{bundle['geral.cnpj']}">
+										<h:outputText value="#{firm.cnpj}" />
+									</p:column>
+									<p:column id="displayname" headerText="#{bundle['geral.razaosocial']}">
+										<h:outputText value="#{firm.	displayName}" />
+									</p:column>
+									<p:column headerText="#{bundle['crud.operacao.acoes']}">
+										<h:link outcome="firm_edit.xhtml" title="#{bundle['crud.operacao.alterar']}">
+											<i class="fa fa-pencil"></i>
+											<f:param name="firm" value="#{firm.id}" />
+										</h:link>
+										<h:link outcome="firm_remove.xhtml" title="#{bundle['crud.operacao.excluir']}">
+											<i class="fa fa-trash-o"></i>
+											<f:param name="firm" value="#{firm.id}" />
+										</h:link>
+									</p:column>
+								</p:dataTable>
+							</h:form>
+						</div>
+						<cs:boxfooter outcome="firm_edit.xhtml" />
+					</div>
+
+				</section>
+
+			</ui:define>
+		</ui:composition>
+	</div>
+</h:body>
+</html>

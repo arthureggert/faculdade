@@ -1,0 +1,14 @@
+module corba {
+
+	struct Usuario {
+		string nome;
+		string senha;
+		long numeroCarteira;
+	};
+
+  interface UsuarioDAO {
+      Usuario validaUsuario(in string nomeUsuario , in string senhaUsuario);
+      double buscaSaldoDisponivel(in string nomeUsuario);
+      double buscaSaldoGeral(in string nomeUsuario);
+	};
+};

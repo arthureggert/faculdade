@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://xmlns.jcp.org/jsf/html" xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets" xmlns:p="http://primefaces.org/ui" xmlns:b="http://bootsfaces.net/ui"
+	xmlns:ps="http://xmlns.jcp.org/jsf/passthrough">
+<body>
+
+	<ui:composition>
+	<h:form>
+		<section class="sidebar">
+			<ul class="sidebar-menu">
+				<li class="header">MENUS</li>
+				<li class="treeview">
+					<p:commandLink action="#{navigationController.goHome()}">
+						<i class="fa fa-dashboard"></i>
+						Principal
+					</p:commandLink>
+				</li>
+				<li class="treeview">
+					<a href="#">
+						<i class="fa fa-files-o"></i>
+						<span>Cadastros</span>
+						<i class="fa fa-angle-left pull-right"></i>
+					</a>
+					<ul class="treeview-menu">
+						<li>
+							<a href="../secured/cities.xhtml">
+								<i class="fa fa-circle-o"></i>
+								Cidade
+							</a>
+						</li>
+						<li>
+							<a href="../secured/states.xhtml">
+								<i class="fa fa-circle-o"></i>
+								Estado
+							</a>
+						</li>
+						<li>
+							<a href="../secured/banks.xhtml">
+								<i class="fa fa-circle-o"></i>
+								Banco
+							</a>
+						</li>
+						<li>
+							<a href="../secured/bankAccounts.xhtml">
+								<i class="fa fa-circle-o"></i>
+								Conta
+							</a>
+						</li>
+						<li>
+<!-- 							<h:link outcome="/pages/protected/admin/empresas.xhtml"> -->
+<!-- 								<i class="fa fa-circle-o"></i> -->
+<!-- 								Empresas -->
+<!-- 							</h:link> -->
+						</li>
+						<li>
+<!-- 							<h:link outcome="/pages/protected/admin/cliente.xhtml"> -->
+<!-- 								<i class="fa fa-circle-o"></i> -->
+<!-- 								#{bundle['cliente.titulo']} -->
+<!-- 							</h:link> -->
+						</li>
+						<li>
+<!-- 							<h:link outcome="/pages/protected/usuario/classificacao.xhtml"> -->
+<!-- 								<i class="fa fa-circle-o"></i> -->
+<!-- 								#{bundle['classificacao.titulo']} -->
+<!-- 							</h:link> -->
+						</li>
+						<li>
+<!-- 							<a href="../layout/fixed.html"> -->
+<!-- 								<i class="fa fa-circle-o"></i> -->
+<!-- 								Fornecedores -->
+<!-- 							</a> -->
+						</li>
+					</ul>
+				</li>
+				<li class="treeview">
+					<a href="#">
+						<i class="fa fa-money"></i>
+						<span>Receber</span>
+						<i class="fa fa-angle-left pull-right"></i>
+					</a>
+					<ul class="treeview-menu">
+						<li>
+							<a href="../layout/top-nav.html">
+								<i class="fa fa-circle-o"></i>
+								Listar
+							</a>
+						</li>
+						<li>
+							<a href="../layout/boxed.html">
+								<i class="fa fa-circle-o"></i>
+								Baixar
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li class="treeview">
+					<a href="#">
+						<i class="fa fa-money"></i>
+						<span>Pagar</span>
+						<i class="fa fa-angle-left pull-right"></i>
+					</a>
+					<ul class="treeview-menu">
+						<li>
+							<a href="../layout/top-nav.html">
+								<i class="fa fa-circle-o"></i>
+								Listar
+							</a>
+						</li>
+						<li>
+							<a href="../layout/boxed.html">
+								<i class="fa fa-circle-o"></i>
+								Baixar
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li class="treeview">
+					<p:commandLink action="#{navigationController.goToMembers()}">
+						<i class="fa fa-users"></i>
+						Usuários
+					</p:commandLink>
+				</li>
+			</ul>
+
+
+		</section>
+		</h:form>
+	</ui:composition>
+</body>
+</html>

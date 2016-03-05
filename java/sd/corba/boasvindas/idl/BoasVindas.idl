@@ -1,0 +1,11 @@
+module stub {
+
+
+  interface MsgBoasVindas {
+
+    string boasVindas();
+
+  };
+
+
+};

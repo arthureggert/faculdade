@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core" xmlns:ui="http://xmlns.jcp.org/jsf/facelets" xmlns:p="http://primefaces.org/ui"
+	xmlns:b="http://bootsfaces.net/ui" xmlns:ps="http://xmlns.jcp.org/jsf/passthrough">
+<body>
+
+	<ui:composition>
+		<h:form>
+			<section class="sidebar">
+				<ul class="sidebar-menu">
+					<li class="header">MENUS</li>
+					<li class="treeview"><p:commandLink action="#{naviggationController.goToHomePage()}">
+							<i class="fa fa-dashboard"></i>
+						Principal
+					</p:commandLink></li>
+					<li class="treeview"><a href="#"> <i class="fa fa-files-o"></i> <span>Cadastros</span> <i
+							class="fa fa-angle-left pull-right"></i>
+					</a>
+						<ul class="treeview-menu">
+							<li><p:commandLink action="#{naviggationController.goToCityPage()}" ajax="false">
+									<i class="fa fa-circle-o"></i>
+								#{bundle['city.title']}
+							</p:commandLink></li>
+							<li><p:commandLink action="#{naviggationController.goToStatePage()}" ajax="false">
+									<i class="fa fa-circle-o"></i>
+								#{bundle['state.title']}
+							</p:commandLink></li>
+							<li><p:commandLink action="#{naviggationController.goToBankPage()}" ajax="false">
+									<i class="fa fa-circle-o"></i>
+								#{bundle['bank.title']}
+							</p:commandLink></li>
+							<li><p:commandLink action="#{naviggationController.goToBankAccountPage()}" ajax="false">
+									<i class="fa fa-circle-o"></i>
+								#{bundle['bankAccount.title']}
+							</p:commandLink></li>
+							<li><p:commandLink action="#{naviggationController.goToFirmPage()}" ajax="false">
+									<i class="fa fa-circle-o"></i>
+								#{bundle['firm.title']}
+							</p:commandLink></li>
+							<li><p:commandLink action="#{naviggationController.goToClientPage()}" ajax="false">
+									<i class="fa fa-circle-o"></i>
+								#{bundle['client.title']}
+							</p:commandLink></li>
+							<li><p:commandLink action="#{naviggationController.goToProviderPage()}" ajax="false">
+									<i class="fa fa-circle-o"></i>
+								#{bundle['provider.title']}
+							</p:commandLink></li>
+							<li><p:commandLink action="#{naviggationController.goToAccountRegisterTypePage()}" ajax="false">
+									<i class="fa fa-circle-o"></i>
+								#{bundle['accountRegisterType.title']}
+							</p:commandLink></li>
+							<li><p:commandLink action="#{naviggationController.goToPaymentFormPage()}" ajax="false">
+									<i class="fa fa-circle-o"></i>
+								#{bundle['paymentForm.title']}
+							</p:commandLink></li>
+						</ul></li>
+					<li class="treeview"><p:commandLink action="#{naviggationController.goToRecivePage()}" ajax="false">
+							<i class="fa fa-money"></i>
+								#{bundle['recive.title']}
+							</p:commandLink></li>
+					<li class="treeview"><p:commandLink action="#{naviggationController.goToPayPage()}" ajax="false">
+							<i class="fa fa-money"></i>
+								Pagar
+							</p:commandLink></li>
+					<li class="treeview"><p:commandLink action="#{naviggationController.goToUserPage()}" ajax="false">
+							<i class="fa fa-users"></i>
+						Usuários
+					</p:commandLink></li>
+				</ul>
+
+
+			</section>
+		</h:form>
+	</ui:composition>
+</body>
+</html>

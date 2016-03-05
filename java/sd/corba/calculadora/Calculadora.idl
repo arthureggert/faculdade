@@ -1,0 +1,22 @@
+module calculadora {
+
+
+  interface calc_numerica {
+
+    boolean soma_int(in short p1, in short p2, out short ret);
+    boolean sub_int(in short p1, in short p2, out short ret);
+
+    boolean div_double(in double p1, in double p2, out short ret);
+    boolean mul_double(in double p1, in double p2, out short ret);
+
+  };
+
+  interface calc_alfa {
+
+    string soma_str(in string str1, in string str2);
+    string mistura_str(in string str1, in string str2);
+    
+  };
+
+
+};

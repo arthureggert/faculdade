@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core" xmlns:ui="http://xmlns.jcp.org/jsf/facelets" xmlns:p="http://primefaces.org/ui"
+	xmlns:b="http://bootsfaces.net/ui" xmlns:ps="http://xmlns.jcp.org/jsf/passthrough">
+<h:body styleClass="skin-blue">
+	<div class="wrapper">
+		<ui:composition template="/WEB-INF/templates/master.xhtml">
+			<ui:define name="content">
+				<p:outputLabel value="PRIMEFACES RULES" styleClass="hidden" />
+
+				<div class="box-body">
+					<div class="row">
+						<div class="col-md-12" style="margin-bottom: 5px">
+							<p:dataTable value="#{indexController.movimentacoes}" var="movimentacao" id="table">
+								<p:column id="name" headerText="Conta">
+									<h:outputText value="#{movimentacao.bankAccount.description}" />
+								</p:column>
+								<p:column id="data" headerText="Data">
+									<h:outputText value="#{movimentacao.registerDate}" />
+								</p:column>
+								<p:column id="tipo" headerText="Tipo">
+									<h:outputText value="#{movimentacao.tipoMovimentacao()}" />
+								</p:column>
+								<p:column id="valor" headerText="Valor">
+									<h:outputText value="#{movimentacao.valorMovimentacao()}" />
+								</p:column>
+							</p:dataTable>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="box box-primary">
+								<div class="box-header with-border">
+									<h3 class="box-title">Receber por Cliente</h3>
+									<div class="box-tools pull-right">
+										<button class="btn btn-box-tool" data-widget="collapse">
+											<i class="fa fa-minus"></i>
+										</button>
+										<button class="btn btn-box-tool" data-widget="remove">
+											<i class="fa fa-times"></i>
+										</button>
+									</div>
+								</div>
+								<div class="box-body chart-responsive">
+									<div class="chart" id="revenue-chart" style="height: 300px;">
+										<p:chart type="pie" model="#{indexController.receberPorCliente}" />
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="box box-primary">
+								<div class="box-header with-border">
+									<h3 class="box-title">Pagar por Fornecedor</h3>
+									<div class="box-tools pull-right">
+										<button class="btn btn-box-tool" data-widget="collapse">
+											<i class="fa fa-minus"></i>
+										</button>
+										<button class="btn btn-box-tool" data-widget="remove">
+											<i class="fa fa-times"></i>
+										</button>
+									</div>
+								</div>
+								<div class="box-body chart-responsive">
+									<div class="chart" id="revenue-chart" style="height: 300px;">
+										<p:chart type="pie" model="#{indexController.pagarPorFonecedor}" />
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</ui:define>
+		</ui:composition>
+	</div>
+</h:body>
+</html>

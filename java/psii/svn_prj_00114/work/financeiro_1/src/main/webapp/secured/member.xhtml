@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core" xmlns:ui="http://xmlns.jcp.org/jsf/facelets" xmlns:p="http://primefaces.org/ui"
+	xmlns:b="http://bootsfaces.net/ui" xmlns:ps="http://xmlns.jcp.org/jsf/passthrough"
+	xmlns:c="http://java.sun.com/jsp/jstl/core">
+<h:body styleClass="skin-blue">
+	<div class="wrapper">
+		<ui:composition template="/secured/templates/master.xhtml">
+			<ui:define name="content">
+
+				<section class="content-header">
+					<h1>
+						#{bundle['usuario.titulo']}
+						<h:panelGroup rendered="#{isNewMember}">
+							<small>#{bundle['crud.operacao.novo']}</small>
+						</h:panelGroup>
+						<h:panelGroup rendered="#{not isNewMember}">
+							<small>#{bundle['crud.operacao.alterar']}</small>
+						</h:panelGroup>
+					</h1>
+					<ol class="breadcrumb">
+						<li><i class="fa fa-dashboard"></i></li>
+						<li>#{bundle['usuario.titulo']}</li>
+						<li><h:panelGroup rendered="#{isNewMember}">#{bundle['crud.operacao.novo']}</h:panelGroup> <h:panelGroup
+								rendered="#{not isNewMember}">#{bundle['crud.operacao.alterar']}</h:panelGroup></li>
+					</ol>
+				</section>
+				<section class="content">
+					<h:form id="formempresa" ps:role="form" styleClass="form-horizontal">
+
+						<div class="box box-primary">
+							<div class="box-header with-border">
+								<h3 class="box-title">#{bundle['usuario.titulo']}</h3>
+							</div>
+							<div class="box-body">
+								<fieldset>
+									<div class="form-group">
+										<label class="col-xs-2 control-label" for="nome">#{bundle['geral.nome']}</label>
+										<div class="col-xs-10">
+											<p:inputText id="nome" ps:placeholder="#{bundle['geral.nome']}" styleClass="form-control input-md"
+												ps:autofocus="true" value="#{memberController.selected.firstName}" />
+											<span class="help-block"> <h:message for="nome" errorClass="invalid" />
+											</span>
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="col-xs-2 control-label" for="sobrenome">#{bundle['geral.sobrenome']}</label>
+										<div class="col-xs-10">
+											<p:inputText id="sobrenome" ps:placeholder="#{bundle['geral.sobrenome']}" styleClass="form-control input-md"
+												value="#{memberController.selected.lastName}" />
+											<span class="help-block"> <h:message for="sobrenome" errorClass="invalid" />
+											</span>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="col-xs-2 control-label" for="email">#{bundle['geral.email']}</label>
+										<div class="col-xs-10">
+											<p:inputText id="email" ps:placeholder="#{bundle['geral.email']}" styleClass="form-control input-md"
+												value="#{memberController.selected.email}" />
+											<span class="help-block"> <h:message for="email" errorClass="invalid" />
+											</span>
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="col-xs-2 control-label" for="roles">#{bundle['geral.telefone']}</label>
+										<div class="col-xs-10">
+											<p:inputText value="#{memberController.selected.phoneNumber}" styleClass="form-control input-md"
+												ps:placeholder="#{bundle['geral.email']}" id="phone" />
+											<span class="help-block"> <h:message for="roles" errorClass="invalid" />
+											</span>
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="col-xs-2 control-label" for="usuario">#{bundle['usuario.titulo']}</label>
+										<div class="col-xs-10">
+											<p:inputText id="usuario" ps:placeholder="#{bundle['usuario.titulo']}" styleClass="form-control input-md"
+												value="#{memberController.username}" disabled="#{not memberController.newMember}" />
+											<span class="help-block"> <h:message for="usuario" errorClass="invalid" />
+											</span>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="col-xs-2 control-label" for="senha">#{bundle['usuario.senha']}</label>
+										<div class="col-xs-10">
+											<h:inputSecret id="senha" ps:placeholder="#{bundle['usuario.senha']}" styleClass="form-control input-md"
+												value="#{passwordHolder.password}" disabled="#{not memberController.newMember}" />
+											<span class="help-block"> <h:message for="senha" errorClass="invalid" />
+											</span>
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="col-xs-2 control-label" for="roles">#{bundle['usuario.roles']}</label>
+										<div class="col-xs-10">
+											<p:selectManyCheckbox value="#{memberController.roles}" label="#{bundle['usuario.roles']}" id="roles"
+												disabled="#{not idm.admin}">
+												<f:selectItems value="#{roles}" />
+											</p:selectManyCheckbox>
+											<span class="help-block"> <h:message for="roles" errorClass="invalid" />
+											</span>
+										</div>
+									</div>
+
+								</fieldset>
+
+								<div class="box-footer">
+									<div class="row">
+										<div class="pull-left col-xs-2">
+											<p:commandButton id="register" action="#{memberController.save()}" value="#{bundle['crud.operacao.salvar']}"
+												styleClass="btn btn-block btn-primary btn-flat" />
+										</div>
+										<div class="pull-left col-xs-2">
+											<p:commandButton
+												action="#{passwordHolder.changePassword(employeeController.selected, passwordHolder.password)}"
+												value="Change password" id="changePasswordBtn" disabled="#{not memberController.newMember}" />
+										</div>
+
+
+
+
+										<div class="col-xs-12">
+											<h:messages styleClass="invalid" globalOnly="true" showDetail="true" errorClass="invalid" />
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</h:form>
+				</section>
+			</ui:define>
+		</ui:composition>
+	</div>
+</h:body>
+</html>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html"
+	template="/WEB-INF/templates/master.xhtml" xmlns:ps="http://xmlns.jcp.org/jsf/passthrough"
+	xmlns:in="http://xmlns.jcp.org/jsf/composite/input" xmlns:p="http://primefaces.org/ui">
+	<ui:define name="content">
+		<f:metadata>
+			<f:viewParam name="user" value="#{memberController.newMember}" converter="#{memberConvertor}" />
+			<f:event listener="#{memberController.preRenderView()}" type="preRenderView" />
+		</f:metadata>
+
+
+		<section class="content-header">
+			<h1>
+				#{bundle['usuario.titulo']}
+				<h:panelGroup rendered="#{memberController.novo}">
+					<small>#{bundle['crud.operacao.novo']}</small>
+				</h:panelGroup>
+				<h:panelGroup rendered="#{not memberController.novo}">
+					<small>#{bundle['crud.operacao.alterar']}</small>
+				</h:panelGroup>
+			</h1>
+			<ol class="breadcrumb">
+				<li><i class="fa fa-dashboard"></i></li>
+				<li>#{bundle['usuario.titulo']}</li>
+				<li><h:panelGroup rendered="#{memberController.novo}">#{bundle['crud.operacao.novo']}</h:panelGroup> <h:panelGroup
+						rendered="#{not memberController.novo}">#{bundle['crud.operacao.alterar']}</h:panelGroup></li>
+			</ol>
+		</section>
+
+		<section class="content">
+			<h:form id="formempresa" ps:role="form" styleClass="form-horizontal">
+				<div class="box box-primary">
+					<div class="box-header with-border">
+						<h3 class="box-title">#{bundle['usuario.titulo']}</h3>
+					</div>
+					<div class="box-body">
+						<fieldset>
+							<in:default idInterno="nome" bundle="#{bundle['geral.nome']}" value="#{memberController.newMember.name}" />
+							<in:default idInterno="email" bundle="#{bundle['geral.email']}" value="#{memberController.newMember.email}" />
+							<in:mask idInterno="telefone" bundle="#{bundle['geral.telefone']}" mascara="#{mask.telefone}"
+								value="#{memberController.newMember.phoneNumber}" />
+						</fieldset>
+
+						<div class="box-footer">
+							<div class="row">
+								<div class="pull-left col-xs-2">
+									<h:commandButton id="register" action="#{memberController.register()}"
+										value="#{bundle['crud.operacao.salvar']}" styleClass="btn btn-block btn-primary btn-flat" />
+									<h:messages globalOnly="true"  infoClass="invalid"/>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</h:form>
+		</section>
+	</ui:define>
+</ui:composition>

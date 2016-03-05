@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html"
+	template="/WEB-INF/templates/master.xhtml" xmlns:ps="http://xmlns.jcp.org/jsf/passthrough"
+	xmlns:in="http://xmlns.jcp.org/jsf/composite/input" xmlns:p="http://primefaces.org/ui">
+	<ui:define name="content">
+		<f:metadata>
+			<f:viewParam name="provider" value="#{providerController.provider}" converter="#{providerConvertor}" />
+			<f:event listener="#{providerController.preRenderView()}" type="preRenderView" />
+		</f:metadata>
+
+		<in:contentheaderedit new="#{providerController.new}" title="#{bundle['provider.title']}" />
+
+		<section class="content">
+			<h:form id="form" ps:role="form" styleClass="form-horizontal">
+				<div class="box box-primary">
+					<in:boxheader title="#{bundle['provider.title']}" />
+					<div class="box-body">
+						<fieldset>
+							<in:default idInterno="name" bundle="#{bundle['geral.nome']}" value="#{providerController.provider.name}" />
+							<in:default idInterno="displayname" bundle="#{bundle['geral.razaosocial']}"
+								value="#{providerController.provider.displayName}" />
+							<in:mask mascara="#{mask.cnpj}" idInterno="cnpj" bundle="#{bundle['geral.cnpj']}"
+								value="#{providerController.provider.cnpj}" />
+							<in:default idInterno="ie" bundle="#{bundle['geral.ie']}" value="#{providerController.provider.ie}" />
+							<in:city idInterno="city" bundle="#{bundle['geral.cidade']}" value="#{providerController.provider.city}" />
+							<in:default idInterno="endereco" bundle="#{bundle['geral.endereco']}" value="#{providerController.provider.address}" />
+							<in:default idInterno="bairro" bundle="#{bundle['geral.bairro']}" value="#{providerController.provider.neighborhood}" />
+							<in:mask mascara="#{mask.cep}" idInterno="cep" bundle="#{bundle['geral.cep']}"
+								value="#{providerController.provider.zipCode}" />
+						</fieldset>
+
+						<div class="box-footer">
+							<div class="row">
+								<div class="pull-left col-xs-2">
+									<h:commandButton id="register" action="#{providerController.save()}" value="#{bundle['crud.operacao.salvar']}"
+										styleClass="btn btn-block btn-primary btn-flat" />
+									<h:messages globalOnly="true" infoClass="invalid" />
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</h:form>
+		</section>
+	</ui:define>
+</ui:composition>

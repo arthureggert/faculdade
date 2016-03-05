@@ -1,0 +1,11 @@
+package trabalho1.enums;
+
+public enum Area {
+
+    FUNDAMENTOS_COMPUTACAO,
+    TECNOLOGIAS_COMPUTACAO,
+    MATEMATICA,
+    CONTEXTO_SOCIAL_PROFISIONAL,
+    FLEXIBILIZACAO,
+    CONCLUSAO_CURSO, key;
+}

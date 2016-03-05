@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:cs="http://xmlns.jcp.org/jsf/composite/input" xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets" xmlns:p="http://primefaces.org/ui" xmlns:b="http://bootsfaces.net/ui"
+	xmlns:ps="http://xmlns.jcp.org/jsf/passthrough">
+<h:body styleClass="skin-blue">
+	<div class="wrapper">
+		<ui:composition template="/WEB-INF/templates/master.xhtml">
+			<ui:define name="content">
+				<cs:contentheader title="Pagar" />
+
+				<section class="content">
+
+					<div class="box box-primary">
+						<cs:boxheader title="Pagar" />
+						<div class="box-body">
+							<h:form id="form">
+								<p:dataTable value="#{pays}" var="pay" id="table">
+									<p:column id="client" headerText="#{bundle['client.title']}">
+										<h:outputText value="#{pay.provider.name}" />
+									</p:column>
+									<p:column id="documento" headerText="Nº Documento">
+										<h:outputText value="#{pay.documentNumber}" />
+									</p:column>
+									<p:column id="dtVenc" headerText="Data Vencimento">
+										<h:outputText value="#{pay.dueDate}" />
+									</p:column>
+									<p:column id="value" headerText="Valor">
+										<h:outputText value="#{pay.value}" />
+									</p:column>
+									<p:column id="vencido" headerText="Titulo Vencido?">
+										<h:outputText value="SIM" rendered="#{pay.vencido}" />
+										<h:outputText value="NÃO" rendered="#{not pay.vencido}" />
+									</p:column>
+									<p:column headerText="#{bundle['crud.operacao.acoes']}">
+										<h:link outcome="pay_edit.xhtml" title="#{bundle['crud.operacao.alterar']}"
+											rendered="#{not payLowController.isPago(pay)}">
+											<i class="fa fa-pencil"></i>
+											<f:param name="pay" value="#{pay.id}" />
+										</h:link>
+										<h:link outcome="pay_remove.xhtml" title="#{bundle['crud.operacao.excluir']}"
+											rendered="#{not payLowController.isPago(pay)}">
+											<i class="fa fa-trash-o"></i>
+											<f:param name="pay" value="#{pay.id}" />
+										</h:link>
+										<h:link outcome="pay_pay.xhtml" title="Baixar" rendered="#{not payLowController.isPago(pay)}">
+											<i class="fa fa-money"></i>
+											<f:param name="pay" value="#{pay.id}" />
+										</h:link>
+									</p:column>
+								</p:dataTable>
+							</h:form>
+						</div>
+						<cs:boxfooter outcome="pay_edit.xhtml" />
+					</div>
+
+				</section>
+
+			</ui:define>
+		</ui:composition>
+	</div>
+</h:body>
+</html>

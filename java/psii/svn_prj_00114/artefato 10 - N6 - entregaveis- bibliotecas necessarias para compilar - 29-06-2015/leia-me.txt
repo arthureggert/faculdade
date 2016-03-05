@@ -1,0 +1,3 @@
+leia-me.txt
+
+Todos as bibliotecas estão descritas no arquivo pom.xml que é padrão maven para download de bibliotecas

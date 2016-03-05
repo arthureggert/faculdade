@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html"
+	template="/WEB-INF/templates/master.xhtml" xmlns:ps="http://xmlns.jcp.org/jsf/passthrough"
+	xmlns:in="http://xmlns.jcp.org/jsf/composite/input" xmlns:p="http://primefaces.org/ui">
+	<ui:define name="content">
+		<f:metadata>
+			<f:viewParam name="recive" value="#{reciveController.recive}" converter="#{reciveConvertor}" />
+			<f:event listener="#{reciveController.preRenderView()}" type="preRenderView" />
+		</f:metadata>
+
+		<in:contentheaderedit new="#{reciveController.new}" title="#{bundle['recive.title']}" />
+
+		<section class="content">
+			<h:form id="form" ps:role="form" styleClass="form-horizontal">
+				<div class="box box-primary">
+					<in:boxheader title="#{bundle['recive.title']}" />
+					<div class="box-body">
+						<fieldset>
+							<in:client idInterno="client" bundle="Cliente" value="#{reciveController.recive.client}"/>
+							<in:default idInterno="documento" bundle="Nº Documento" value="#{reciveController.recive.documentNumber}"/>
+							<in:date idInterno="dtVenc" bundle="Data Vencimento" value="#{reciveController.recive.dueDate}"/>
+							<in:number idInterno="valor" bundle="Valor" value="#{reciveController.recive.value}"/>
+						
+						</fieldset>
+
+						<div class="box-footer">
+							<div class="row">
+								<div class="pull-left col-xs-2">
+									<h:commandButton id="register" action="#{reciveController.save()}"
+										value="#{bundle['crud.operacao.salvar']}" styleClass="btn btn-block btn-primary btn-flat" />
+									<h:messages globalOnly="true" infoClass="invalid" />
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</h:form>
+		</section>
+	</ui:define>
+</ui:composition>

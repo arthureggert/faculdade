@@ -1,0 +1,7 @@
+module corba {
+
+  interface IFuncoesCorba {
+    string formataValores(in double textoValor);
+  };
+
+};

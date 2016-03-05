@@ -1,0 +1,17 @@
+17-03-2015 - Crachas e placa empresa
+16-03-2015 - Validação da tecnologia
+24-03-2015 - Trabalho correlato
+23-03-2015 - relação de requisitos funcionais e não funcionais
+23-03-2015 - Projeto das telas do sistema
+23-03-2015 - Cronograma original
+30-03-2015 - MER lógico do sistema
+30-03-2015 - Proposta comercial
+04-05-2015 - 1ª Apresentação intermediaria
+08-06-2015 - 2ª Apresentação intermediaria
+29-06-2015 - Entregaveis
+29-06-2015 - Entregaveis Bibliotecas necessarias para compilar
+29-06-2015 - Entregaveis Documentação(Manual do usuario)
+29-06-2015 - Apresentação final
+29-06-2015 - Fontes final
+29-06-2015 - Avaliação do projeto
+06-07-2015 - Avaliação do projeto

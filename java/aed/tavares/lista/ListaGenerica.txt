@@ -1,0 +1,87 @@
+public class Main {
+
+	public static void main(String[] args) {
+		Lista<Integer> lInt = new Lista<Integer> ();
+		Lista <Long> lLong = new Lista<Long> ();
+		
+		lInt.insereLista(10);
+		
+		lLong.insereLista(10L);
+		
+		if( lInt.pesquisaLista(10) != null) 
+		    System.out.println("achou");
+		else
+			System.out.println("Não achou");
+			
+		if( lLong.pesquisaLista(10L) != null) 
+		    System.out.println("achou");
+		else
+			System.out.println("Não achou");
+			
+	}
+}
+
+
+public class Lista<Tipo> {
+    
+	public NodoLista<Tipo> inicio;
+	
+	public Lista ()
+	{
+		this.inicio = null;
+	}
+	
+	public boolean insereLista(Tipo elemento)
+	{
+		NodoLista <Tipo> nodo = new NodoLista<Tipo> (elemento);
+		nodo.setProximo(inicio);
+		inicio = nodo;
+		return true;
+
+	}
+	
+
+	public NodoLista<Tipo> pesquisaLista(Tipo elemento)
+	{   NodoLista<Tipo> p = inicio;
+	    while ( p != null )
+		   if(p.getInfo() == elemento)
+			   return p;
+		   else
+			   p = p.getProximo();
+	    return null;
+	}
+	
+	
+}
+
+public class NodoLista<Tipo> {
+	
+	private Tipo info;
+	private NodoLista<Tipo> proximo;
+	
+	public NodoLista(Tipo elemento)
+	{
+		this.info = elemento;
+		proximo = null;
+		
+	}
+	
+	public void setProximo(NodoLista<Tipo> proximo){
+		
+		this.proximo = proximo;
+	}
+	
+	public Tipo getInfo() {
+		return info;
+	}
+	
+	public NodoLista <Tipo> getProximo()
+	{
+		return this.proximo;
+		
+	}
+	
+	
+
+}
+
