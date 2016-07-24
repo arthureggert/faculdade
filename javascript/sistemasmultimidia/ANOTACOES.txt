@@ -1,0 +1,4 @@
+1.	Cadastrar nivel de dificuldade na questap
+2.	o nivel de dificuldade ele vai impactar no tempo
+3.	ao responder errado, a altertinativa ira sumir de ambos os lados e o oponente recebera metade do valor da questao atual (arredondar para cima);
+4.	ao responder certo, pontuar o total da questao, travar e posicionar na proxima questao.

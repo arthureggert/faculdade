@@ -1,0 +1,239 @@
+body{
+    overflow: hidden;
+    font-size:100%;
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+table {
+    color: white;
+}
+
+table#main {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+table#main tr {
+    width: 100%;
+}
+
+table#main .right {
+    /*border-left: 0.5px solid black;*/
+    /*background-color: #f1f1f1;*/
+}
+
+.question {
+    background-color: #F1F1F1;
+    width: 10%;
+}
+
+td.question table {
+    width: 100%;
+    height: 100%;
+    white-space: nowrap;
+    color: #6D6D6D;
+    border-left: 1px solid #666;
+    border-color: #e5e5e5;
+}
+
+td.response-bar table  {
+    width: 100%;
+    height: 100%;
+    white-space: nowrap;
+}
+
+
+/* INICIO - Coluna da esquerda, ocupa metade da tela */
+table#main tr td.left {
+    width: 50%;
+}
+
+
+table.left {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+table.left .response-bar tr td:nth-child(1) {
+    background-color: #4285F4;
+    background-image: linear-gradient(to left, transparent, rgba(0,0,0,0.2));
+
+}
+
+table.left tr td:nth-child(2) {
+    width: 75%;
+}
+
+.rotate-content-left {
+    position: absolute;
+    width: 10%;
+    height: 100%;
+    right: 0;
+    top: 0;
+}
+
+.question-left {
+    position: absolute;
+    right: 50%;
+    width: auto !important;
+    transform: rotate(90deg) translate(-50%, -50%) !important;
+}
+
+.rotate-left {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+    transform-origin: right top 0;
+    width: 0;
+}
+
+.timer-left-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.timer-left {
+    position: absolute;
+    bottom: 2em;
+    right: 0;
+    color: #EA4335;
+}
+
+.response-content-left {
+    position: absolute;
+    top: 0;
+    width: 15%;
+    height: 100%;
+}
+
+.response-left {
+    position: absolute;
+    height: 0;
+    width: auto;
+    right: 30%;
+    transform: rotate(90deg) translate(-50%, -50%);
+}
+
+.graph-content-left {
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.graph-left {
+    position: relative;
+    height: 160px;
+    width: 200px;
+    transform: rotate(90deg) translate(-50%, -50%);
+    top: 58%;
+}
+/* FIM - Coluna da esquerda, ocupa metade da tela */
+
+
+
+/* INICIO - Coluna da direita, ocupa metade da tela */
+table#main tr td.right {
+    width: 50%;
+}
+
+table.right {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+table.right tr td:nth-child(2) {
+    width: 75%;
+}
+
+table.right tr td:nth-child(3) {
+    width: 15%;
+    background-color: #FBBC05;
+}
+
+.rotate-content-right {
+    position: absolute;
+    width: 10%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+
+.question-right {
+    position: absolute;
+    left: 50%;
+    width: auto !important;
+    transform: rotate(-90deg) translate(-50%, -50%) !important;
+}
+
+.rotate-right {
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    transform-origin: left top 0;
+    width: 0;
+}
+
+
+.timer-right-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.timer-right {
+    position: absolute;
+    top: 3em;
+    color: #EA4335;
+}
+
+.response-content-right {
+    position: absolute;
+    top: 0;
+    width: 15%;
+    height: 100%;
+}
+
+.response-right {
+    position: absolute;
+    height: 0;
+    width: auto;
+    left: 30%;
+    transform: rotate(-90deg) translate(-50%, -50%);
+}
+
+.graph-content-right {
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.graph-right {
+    position: relative;
+    height: 160px;
+    width: 200px;
+    transform: rotate(-90deg) translate(-50%, -50%);
+    top: -30%;
+}
+/* FIM - Coluna da direita, ocupa metade da tela */
+
+div {
+    font-size: 1.3em;
+}
+
+

@@ -1,0 +1,20 @@
+﻿<html>
+<head>
+    <title>Math Quiz</title>
+    <script src="jquery-2.1.4.min.js"></script>
+    <script src="graphobed.js"></script>
+</head>
+<body>
+    <button id="btn1" value="botao 01" onclick="teste(this);">Botao 01</button>
+    <button id="btn2" value="botao 01" onclick="teste(this);">Botao 02</button>
+    <button id="btn3" value="botao 01" onclick="teste(this);">Botao 03</button>
+    <button id="btn4" value="botao 01" onclick="teste(this);">Botao 04</button>
+    <br />
+    <textarea id="txtTest" rows="15" cols="65"></textarea>
+</body>
+</html>
+<script>
+    function teste(obj) {
+        $('#txtTest').html(obj.innerHTML + '\n' + $('#txtTest').html());
+    }
+</script>

@@ -1,0 +1,39 @@
+﻿<html>
+<head>
+    <title>Math Quiz</title>
+    <script src="libs/jquery-2.1.4.min.js"></script>
+    <script src="libs/graphobed.js"></script>
+    <script src="libs/hammer.min.js"></script>
+    <style>
+        .btnResposta{
+            height: 160px;
+            width: 270px;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn1" value="botao 01" onclick="teste(this);" class="btnResposta">Botao 01</button>
+    <button id="btn2" value="botao 01" onclick="teste(this);" class="btnResposta">Botao 02</button>
+    <button id="btn3" value="botao 01" onclick="teste(this);" class="btnResposta">Botao 03</button>
+    <button id="btn4" value="botao 01" onclick="teste(this);" class="btnResposta">Botao 04</button>
+    <br />
+    <textarea id="txtTest" rows="15" cols="65"></textarea>
+
+    <div style="width:550px;">
+        <h2>graphobed Demo</h2>
+        <p>This is a demo of "graphobed" embedding. We have an equation in our text and the script detects and parses it:</p>
+
+        <p>Example function: *# 2^x-1,55 #*</p>
+
+        <p>Let us do a second graph: *# sin(x)*x^2 #*</p>
+
+        <p>What about pi and e? *# e^(pi*x) #*</p>
+    </div>
+
+</body>
+</html>
+<script>
+    function teste(obj) {
+        $('#txtTest').html(obj.innerHTML + '\n' + $('#txtTest').html());
+    }
+</script>

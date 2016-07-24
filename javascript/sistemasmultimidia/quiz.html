@@ -1,0 +1,318 @@
+﻿<html>
+   <head>
+      <meta charset="utf-8">
+      <title>Math Quiz</title>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <link href="libs/bootstrap/dist/css/bootstrap.css" type="text/css" rel="stylesheet" />
+      <link href="libs/bootstrap/dist/css/bootstrap-theme.css" type="text/css" rel="stylesheet" />
+      <link href="quiz.css" type="text/css" rel="stylesheet" />
+   </head>
+   <body>
+      <table id="main">
+         <tr>
+            <td class="left">
+               <table class="left">
+                  <tr>
+                     <td class="response-bar">
+                        <table>
+                           <tr>
+                              <td>
+                                 <div class="response-content-left">
+                                    <div class="response-left rotate-left">
+                                       Arraste a resposta aqui
+                                    </div>
+                                 </div>
+                              </td>
+                           </tr>
+                        </table>
+                     </td>
+                     <!--TODO Corrigir tamanho dos gráficos para cada tela -->
+                     <td>
+                        <table style="width: 100%; height: 100%;" class="table-respostas-left">
+                           <tr>
+                              <td style="height: 25%">
+                                 <div class="graph-content-left">
+                                    <div class="graphobed_canvaswrap graph-left" style="background:#FFF;">
+                                       <canvas id="canvas2d_0" class="graphobed graphobed_canvas" function="1" width="200px" height="160px"></canvas>
+                                    </div>
+                                 </div>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td style="height: 25%">
+                                 <div class="graph-content-left">
+                                    <div class="graphobed_canvaswrap graph-left" style="background:#FFF;">
+                                       <canvas id="canvas2d_1" class="graphobed graphobed_canvas" function="1" width="200px" height="160px"></canvas>
+                                    </div>
+                                 </div>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td style="height: 25%">
+                                 <div class="graph-content-left">
+                                    <div class="graphobed_canvaswrap graph-left" style="background:#FFF;">
+                                       <canvas id="canvas2d_2" class="graphobed graphobed_canvas" function="1" width="200px" height="160px"></canvas>
+                                    </div>
+                                 </div>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td style="height: 25%">
+                                 <div class="graph-content-left">
+                                    <div class="graphobed_canvaswrap graph-left" style="background:#FFF;">
+                                       <canvas id="canvas2d_3" class="graphobed graphobed_canvas" function="1" width="200px" height="160px"></canvas>
+                                    </div>
+                                 </div>
+                              </td>
+                           </tr>
+                        </table>
+                     </td>
+                     <!-- Pergunta da Esquerda -->
+                     <td class="question">
+                        <table>
+                           <tr>
+                              <td>
+                                 <!--Pergunta-->
+                                 <div class="rotate-content-left">
+                                    <div class="rotate-left question-left">A pergunta é aqui</div>
+                                 </div>
+                                 <!--Timer-->
+                                 <div class="timer-left-content">
+                                    <div id="time" class="timer-left rotate-left" style="background-color: yellow;">
+                                       00:30
+                                    </div>
+                                 </div>
+                              </td>
+                           </tr>
+                        </table>
+                     </td>
+                  </tr>
+               </table>
+            </td>
+            <td class="right">
+               <table class="right">
+                  <tr>
+                     <!-- Pergunta da Direita -->
+                     <td class="question">
+                        <table>
+                           <tr>
+                              <td>
+                                 <!--Timer-->
+                                 <div class="timer-right-content">
+                                    <div class="timer-right rotate-right">
+                                       00:30
+                                    </div>
+                                 </div>
+                                 <!--Pergunta-->
+                                 <div class="rotate-content-right">
+                                    <div class="rotate-right question-right">A pergunta é aqui</div>
+                                 </div>
+                              </td>
+                           </tr>
+                        </table>
+                     </td>
+                     <!-- Respostas da direita -->
+                     <td>
+                         <table style="width: 100%; height: 100%;" class="table-respostas-right">
+                             <tr>
+                                 <td style="height: 25%">
+                                     <div class="graph-content-right">
+                                         <div class="graphobed_canvaswrap graph-right" style="background:#FFF;">
+                                             <canvas id="canvas2d_4" class="graphobed graphobed_canvas" function="1" width="200px" height="160px"></canvas>
+                                         </div>
+                                     </div>
+                                 </td>
+                             </tr>
+                             <tr>
+                                 <td style="height: 25%">
+                                     <div class="graph-content-right">
+                                         <div class="graphobed_canvaswrap graph-right" style="background:#FFF;">
+                                             <canvas id="canvas2d_5" class="graphobed graphobed_canvas" function="1" width="200px" height="160px"></canvas>
+                                         </div>
+                                     </div>
+                                 </td>
+                             </tr>
+                             <tr>
+                                 <td style="height: 25%">
+                                     <div class="graph-content-right">
+                                         <div class="graphobed_canvaswrap graph-right" style="background:#FFF;">
+                                             <canvas id="canvas2d_6" class="graphobed graphobed_canvas" function="1" width="200px" height="160px"></canvas>
+                                         </div>
+                                     </div>
+                                 </td>
+                             </tr>
+                             <tr>
+                                 <td style="height: 25%">
+                                     <div class="graph-content-right">
+                                         <div class="graphobed_canvaswrap graph-right" style="background:#FFF;">
+                                             <canvas id="canvas2d_7" class="graphobed graphobed_canvas" function="1" width="200px" height="160px"></canvas>
+                                         </div>
+                                     </div>
+                                 </td>
+                             </tr>
+                         </table>
+                     </td>
+                     <td class="response-bar">
+                        <table>
+                           <tr>
+                              <td>
+                                 <div class="response-content-right">
+                                    <div class="response-right rotate-right">
+                                       Arraste a resposta aqui
+                                    </div>
+                                 </div>
+                              </td>
+                           </tr>
+                        </table>
+                     </td>
+                  </tr>
+               </table>
+            </td>
+         </tr>
+      </table>
+
+      <div id="modalResult" class="modal fade" data-keyboard="false" data-backdrop="static">
+        <div class="modal-dialog">
+        </div>
+      </div>
+
+    <script src="js/touchevents.js"></script>
+    <script src="libs/jquery-2.1.4.min.js"></script>
+    <script src="libs/math.js"></script>
+    <script src="libs/easel.js"></script>
+    <script src="libs/graphobed.js"></script>
+    <script src="libs/hammer.min.js"></script>
+    <script src="libs/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="js/load.js"></script>
+    <script src="perguntas.js"></script>
+    <script src="quiz.js"></script>
+    <script src="js/timer.js"></script>
+
+    <script>
+        // Iniciar biblioteca de rendereizacao de exporess�es
+        var plotGraficos = new Graphobed();
+        // Iniciar gerenciador de perguntas, a vari�vel 'perguntasJSON' � definida no arquivo perguntas.js
+        var gerenciadorPerguntas = new GerenciadorPerguntas(perguntasJSON);
+        // Iniciar gerenciador de pontuacao
+        var gerenciadorPontuacao = new GerenciadorPontuacao(['direita', 'esquerda']);
+        // Valor padrao de resposta
+        var tempoResposta = 30000;
+        // Tempo restante cronometro
+        var tempoCronometro = 0;
+        // Iniciar timer de troca de pergunta
+        /*var timerConf = 10000;
+        var timer = new Timer(function() {
+          console.log('engdoufo');
+          atualizarQuestaoPagina();
+        }, timerConf);*/
+
+        function atualizarQuestaoPagina() {
+            if (gerenciadorPerguntas.indexQuestaoAtual + 1 >= gerenciadorPerguntas.perguntas.length) {
+                //timer.pause();
+                mostrarPontuacao();
+                return;
+            }
+            // Atualizar as perguntas trocando o HTML da p�gina
+            gerenciadorPerguntas.atualizarQuestao();
+            // Chamar a biblioteca de renderiza��o das expressoes
+            plotGraficos.atualizarGraficos();
+            // Recarregar eventos de toque para objetos adicionados e removidos
+            loadTouchEvents();
+            // Reiniciar cronometro
+            //reiniciarCronometro();
+        }
+        
+        function marcarResposta(jogador, resposta) {
+            //alert(resposta);
+            var idJogador = jogador == 'esquerda' ? 1 : 2;
+            var perguntaAtual = gerenciadorPerguntas.perguntas[gerenciadorPerguntas.indexQuestaoAtual];
+            // Verifica se respondeu corretamente
+            if (gerenciadorPontuacao.adicionarResposta(jogador, perguntaAtual, resposta)) {
+                // Posicionar na proxima questao
+                atualizarQuestaoPagina();
+                // Resetar o timer
+                reiniciarCronometro();
+            } else {
+              var canvas = "canvas[function='" + resposta + "']";
+              $(canvas).each(function () {
+                $(this).remove();
+              });
+            }
+        }
+
+        var timerCronometro = null;
+        
+
+        function reiniciarCronometro() {
+            clearTimeout(timerCronometro);
+            tempoCronometro = tempoResposta;
+            timerCronometro = setInterval(function () { atualizarCronometro(); }, 1000);
+        }
+
+        function atualizarCronometro() {
+            if (parseInt(tempoCronometro, 10) >= 0) {
+                $('.timer-right, .timer-left').each(function (i, obj) {
+                    $(obj).html(toHHMMSS(parseInt(tempoCronometro / 1000, 10)));
+                });
+                tempoCronometro -= 1000;
+            } else {
+                tempoCronometro = tempoResposta;
+                atualizarQuestaoPagina();
+            }
+            
+        }
+
+        function toHHMMSS (value) {
+          var sec_num = parseInt(value, 10); // don't forget the second param
+          var hours   = Math.floor(sec_num / 3600);
+          var minutes = Math.floor((sec_num - (hours * 3600)) / 60);
+          var seconds = sec_num - (hours * 3600) - (minutes * 60);
+
+          if (hours   < 10) {hours   = "0"+hours;}
+          if (minutes < 10) {minutes = "0"+minutes;}
+          if (seconds < 10) {seconds = "0"+seconds;}
+          var time    = minutes+':'+seconds;
+          return time;
+        }
+
+        atualizarQuestaoPagina();
+        reiniciarCronometro();
+
+
+        function mostrarPontuacao() {
+          var pontuacaoEsquerda = gerenciadorPontuacao.pontuacao['esquerda'];
+          var pontuacaoDireita = gerenciadorPontuacao.pontuacao['direita'];
+
+          var mensagem = "";
+          if(pontuacaoDireita == pontuacaoEsquerda) {
+            mensagem = "<p class='text-danger'>O jogo ficou empatado :(</p>"
+          } else {
+            if(pontuacaoDireita > pontuacaoEsquerda) {
+              mensagem = "<p class='text-success'>Parabéns jogador da direita, você ganhou!</p>"
+            } else {
+              mensagem = "<p class='text-success'>Parabéns jogador da esquerda, você ganhou!</p>"
+            }
+          }
+
+          var html = "<div class='modal-content'>" +
+                        "<div class='modal-header'>" +
+                            "<h3 class='modal-title text-center'>Resultado</h3>" +
+                        "</div>" +
+                        "<div class='modal-body text-center'> "
+                            + mensagem +
+                            "<p>Pontuação</p>" +
+                            "<p class='text-primary'><small>Jogador da esquerda: " + pontuacaoEsquerda + " ponto(s)</small></p>" +
+                            "<p class='text-warning'><small>Jogador da direita: " + pontuacaoDireita + " ponto(s)</small></p>" +
+                        "</div>" +
+                        "<div class='modal-footer ' >" +
+                            "<button type='button' class='btn btn-success' onclick='goToHome()'>Inicio</button>" +
+                            "<button type='button' class='btn btn-primary' onclick='goToQuiz()'>Jogar novamente</button>" +
+                        "</div>" +
+                      "</div>";
+
+          $(".modal-dialog").html(html);
+          $('#modalResult').modal();
+        }
+    </script>
+   </body>
+</html>

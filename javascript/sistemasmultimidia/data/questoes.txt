@@ -1,0 +1,1 @@
+[{"Pergunta":"2x-4","Resposta":null,"Tipo":1,"Respostas":["2x-4","3x+4","4x*6"],"Codigo":1},{"Pergunta":"2x*4","Resposta":null,"Tipo":1,"Respostas":["2x*4","4x/4","2x^3"],"Codigo":2}]

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Visede Quimica - Modulo p/ Ensino da Quimica">
+    <meta name="author" content="Arthur Henrique Eggert">
+
+    <title>Visedu Quimica</title>
+
+    <!-- Libs Terceiros -->
+    <script src="js/libs/outros/jquery.js"></script>
+    <script src="js/libs/outros/bootstrap.js"></script>
+    <script src="js/libs/outros/lodash.js"></script>
+    <script src="js/libs/outros/sb-admin-2.js"></script>
+
+    <!-- ENGINE -->
+    <script src="js/libs/engine/lib/prototype-1.6.0.2.js"></script>
+    <script src="js/libs/engine/lib/stats.min.js"></script>
+    <script src="js/libs/engine/src/physic/box2d/common/b2Settings.js"></script>
+    <script src="js/libs/engine/src/physic/box2d/common/math/b2Vec2.js"></script>
+    <script src="js/libs/engine/src/physic/box2d/common/math/b2Mat22.js"></script>
+    <script src="js/libs/engine/src/physic/box2d/common/math/b2Math.js"></script>
+    <script src="js/libs/engine/src/physic/box2d/collision/b2AABB.js"></script>
+    <script src="js/libs/engine/src/physic/box2d/collision/b2Bound.js"></script>
+    <script src="js/libs/engine/src/physic/box2d/collision/b2BoundValues.js"></script>
+    <script src="js/libs/engine/src/physic/box2d/collision/b2Pair.js"></script>
+    <script src="js/libs/engine/src/physic/box2d/collision/b2PairCallback.js"></script>
+    <script src="js/libs/engine/src/physic/box2d/collision/b2BufferedPair.js"></script>
+    <script src="js/libs/engine/src/physic/box2d/collision/b2PairManager.js"></script>
+    <script src="js/libs/engine/src/physic/box2d/collision/b2BroadPhase.js"></script>
+    <script src="js/libs/engine/src/physic/box2d/collision/b2Collision.js"></script>
+    <script src="js/libs/engine/src/physic/box2d/collision/Features.js"></script>
+    <script src="js/libs/engine/src/physic/box2d/collision/b2ContactID.js"></script>
+    <script src="js/libs/engine/src/physic/box2d/collision/b2ContactPoint.js"></script>
+    <script src="js/libs/engine/src/physic/box2d/collision/b2Distance.js"></script>
+    <script src="js/libs/engine/src/physic/box2d/collision/b2Manifold.js"></script>
+    <script src="js/libs/engine/src/physic/box2d/collision/b2OBB.js"></script>
+    <script src="js/libs/engine/src/physic/box2d/collision/b2Proxy.js"></script>
+    <script src="js/libs/engine/src/physic/box2d/collision/ClipVertex.js"></script>
+    <script src="js/libs/engine/src/physic/box2d/collision/shapes/b2Shape.js"></script>
+    <script src="js/libs/engine/src/physic/box2d/collision/shapes/b2ShapeDef.js"></script>
+    <script src="js/libs/engine/src/physic/box2d/collision/shapes/b2BoxDef.js"></script>
+    <script src="js/libs/engine/src/physic/box2d/collision/shapes/b2CircleDef.js"></script>
+    <script src="js/libs/engine/src/physic/box2d/collision/shapes/b2CircleShape.js"></script>
+    <script src="js/libs/engine/src/physic/box2d/collision/shapes/b2MassData.js"></script>
+    <script src="js/libs/engine/src/physic/box2d/collision/shapes/b2PolyDef.js"></script>
+    <script src="js/libs/engine/src/physic/box2d/collision/shapes/b2PolyShape.js"></script>
+    <script src="js/libs/engine/src/physic/box2d/dynamics/b2Body.js"></script>
+    <script src="js/libs/engine/src/physic/box2d/dynamics/b2BodyDef.js"></script>
+    <script src="js/libs/engine/src/physic/box2d/dynamics/b2CollisionFilter.js"></script>
+    <script src="js/libs/engine/src/physic/box2d/dynamics/b2Island.js"></script>
+    <script src="js/libs/engine/src/physic/box2d/dynamics/b2TimeStep.js"></script>
+    <script src="js/libs/engine/src/physic/box2d/dynamics/contacts/b2ContactNode.js"></script>
+    <script src="js/libs/engine/src/physic/box2d/dynamics/contacts/b2Contact.js"></script>
+    <script src="js/libs/engine/src/physic/box2d/dynamics/contacts/b2ContactConstraint.js"></script>
+    <script src="js/libs/engine/src/physic/box2d/dynamics/contacts/b2ContactConstraintPoint.js"></script>
+    <script src="js/libs/engine/src/physic/box2d/dynamics/contacts/b2ContactRegister.js"></script>
+    <script src="js/libs/engine/src/physic/box2d/dynamics/contacts/b2ContactSolver.js"></script>
+    <script src="js/libs/engine/src/physic/box2d/dynamics/contacts/b2CircleContact.js"></script>
+    <script src="js/libs/engine/src/physic/box2d/dynamics/contacts/b2Conservative.js"></script>
+    <script src="js/libs/engine/src/physic/box2d/dynamics/contacts/b2NullContact.js"></script>
+    <script src="js/libs/engine/src/physic/box2d/dynamics/contacts/b2PolyAndCircleContact.js"></script>
+    <script src="js/libs/engine/src/physic/box2d/dynamics/contacts/b2PolyContact.js"></script>
+    <script src="js/libs/engine/src/physic/box2d/dynamics/b2ContactManager.js"></script>
+    <script src="js/libs/engine/src/physic/box2d/dynamics/b2World.js"></script>
+    <script src="js/libs/engine/src/physic/box2d/dynamics/b2WorldListener.js"></script>
+    <script src="js/libs/engine/src/physic/box2d/dynamics/joints/b2JointNode.js"></script>
+    <script src="js/libs/engine/src/physic/box2d/dynamics/joints/b2Joint.js"></script>
+    <script src="js/libs/engine/src/physic/box2d/dynamics/joints/b2JointDef.js"></script>
+    <script src="js/libs/engine/src/physic/box2d/dynamics/joints/b2DistanceJoint.js"></script>
+    <script src="js/libs/engine/src/physic/box2d/dynamics/joints/b2DistanceJointDef.js"></script>
+    <script src="js/libs/engine/src/physic/box2d/dynamics/joints/b2Jacobian.js"></script>
+    <script src="js/libs/engine/src/physic/box2d/dynamics/joints/b2GearJoint.js"></script>
+    <script src="js/libs/engine/src/physic/box2d/dynamics/joints/b2GearJointDef.js"></script>
+    <script src="js/libs/engine/src/physic/box2d/dynamics/joints/b2MouseJoint.js"></script>
+    <script src="js/libs/engine/src/physic/box2d/dynamics/joints/b2MouseJointDef.js"></script>
+    <script src="js/libs/engine/src/physic/box2d/dynamics/joints/b2PrismaticJoint.js"></script>
+    <script src="js/libs/engine/src/physic/box2d/dynamics/joints/b2PrismaticJointDef.js"></script>
+    <script src="js/libs/engine/src/physic/box2d/dynamics/joints/b2PulleyJoint.js"></script>
+    <script src="js/libs/engine/src/physic/box2d/dynamics/joints/b2PulleyJointDef.js"></script>
+    <script src="js/libs/engine/src/physic/box2d/dynamics/joints/b2RevoluteJoint.js"></script>
+    <script src="js/libs/engine/src/physic/box2d/dynamics/joints/b2RevoluteJointDef.js"></script>
+
+    <script src="js/libs/engine/src/utils/ArrayUtils.js"></script>
+    <script src="js/libs/engine/src/utils/JSUtils.js"></script>
+    <script src="js/libs/engine/src/utils/ComponentUtils.js"></script>
+    <script src="js/libs/engine/src/utils/MathUtils.js"></script>
+    <script src="js/libs/engine/src/utils/ColorUtils.js"></script>
+    <script src="js/libs/engine/src/utils/ThreeUtils.js"></script>
+
+    <script src="js/libs/engine/src/game/AssetStore.js"></script>
+    <script src="js/libs/engine/src/game/Asset.js"></script>
+    <script src="js/libs/engine/src/game/Game.js"></script>
+    <script src="js/libs/engine/src/game/Layer.js"></script>
+    <script src="js/libs/engine/src/game/Scene.js"></script>
+    <script src="js/libs/engine/src/game/Camera.js"></script>
+
+    <script src="js/libs/engine/src/geometric/Point.js"></script>
+    <script src="js/libs/engine/src/geometric/Point2D.js"></script>
+    <script src="js/libs/engine/src/geometric/Point3D.js"></script>
+
+    <script src="js/libs/engine/src/gameobject/GameObject.js"></script>
+    <script src="js/libs/engine/src/gameobject/PolygonObject.js"></script>
+    <script src="js/libs/engine/src/gameobject/BoxObject.js"></script>
+    <script src="js/libs/engine/src/gameobject/CircleObject.js"></script>
+    <script src="js/libs/engine/src/gameobject/TemplateObject.js"></script>
+    <script src="js/libs/engine/src/gameobject/TemplateWithPointsObject.js"></script>
+
+    <script src="js/libs/engine/src/builder/ThreeJSBuilder.js"></script>
+
+    <script src="js/libs/engine/src/gameobject/ObjectFactory.js"></script>
+    <script src="js/libs/engine/src/gameobject/canvas/CanvasObjectFactory.js"></script>
+    <script src="js/libs/engine/src/gameobject/threeJS/ThreeJSObjectFactory.js"></script>
+
+    <script src="js/libs/engine/src/component/Component.js"></script>
+    <script src="js/libs/engine/src/component/RenderableComponent.js"></script>
+    <script src="js/libs/engine/src/component/LightComponent.js"></script>
+    <script src="js/libs/engine/src/component/TransformationComponent.js"></script>
+    <script src="js/libs/engine/src/component/BoxRenderComponent.js"></script>
+    <script src="js/libs/engine/src/component/CubeRenderComponent.js"></script>
+    <script src="js/libs/engine/src/component/PolygonRenderComponent.js"></script>
+    <script src="js/libs/engine/src/component/LinesRenderComponent.js"></script>
+    <script src="js/libs/engine/src/component/SpheresRenderComponent.js"></script>
+    <script src="js/libs/engine/src/component/CirclesRenderComponent.js"></script>
+    <script src="js/libs/engine/src/component/SplineRenderComponent.js"></script>
+    <script src="js/libs/engine/src/component/ScaleComponent.js"></script>
+    <script src="js/libs/engine/src/component/threeJS/ThreeJSScaleComponent.js"></script>
+    <script src="js/libs/engine/src/component/TranslateComponent.js"></script>
+    <script src="js/libs/engine/src/component/threeJS/ThreeJSTranslateComponent.js"></script>
+    <script src="js/libs/engine/src/component/RotateComponent.js"></script>
+    <script src="js/libs/engine/src/component/threeJS/ThreeJSRotateComponent.js"></script>
+    <script src="js/libs/engine/src/component/ComponentFactory.js"></script>
+    <script src="js/libs/engine/src/component/threeJS/ThreeJSComponentFactory.js"></script>
+    <script src="js/libs/engine/src/component/ImageRenderComponent.js"></script>
+    <script src="js/libs/engine/src/component/CircleRenderComponent.js"></script>
+    <script src="js/libs/engine/src/component/AmbientLightComponent.js"></script>
+    <script src="js/libs/engine/src/component/HemisphereLightComponent.js"></script>
+    <script src="js/libs/engine/src/component/DirectionalLightComponent.js"></script>
+    <script src="js/libs/engine/src/component/PointLightComponent.js"></script>
+    <script src="js/libs/engine/src/component/SpotLightComponent.js"></script>
+    <script src="js/libs/engine/src/component/AnimationRenderComponent.js"></script>
+    <script src="js/libs/engine/src/component/GridRenderComponent.js"></script>
+    <script src="js/libs/engine/src/component/AxisRenderComponent.js"></script>
+    <script src="js/libs/engine/src/component/CameraComponent.js"></script>
+    <script src="js/libs/engine/src/component/GroupComponent.js"></script>
+
+    <script src="js/libs/engine/src/system/RenderSystem.js"></script>
+    <script src="js/libs/engine/src/system/LogicSystem.js"></script>
+
+    <script src="js/libs/engine/src/api/APIHandler.js"></script>
+    <script src="js/libs/engine/src/api/ThreeJSHandler.js"></script>
+
+    <!--<script type="text/javascript">-->
+        <!--$(document).ready(function () {-->
+            <!--var canvas = document.getElementById('canvasDesenho');-->
+            <!--var divDesenho = $('#divDesenho');-->
+            <!--canvas.width = divDesenho.width();-->
+            <!--canvas.height = divDesenho.height();-->
+        <!--});-->
+    <!--</script>-->
+
+    <!-- CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/timeline.css" rel="stylesheet">
+    <link href="css/sb-admin-2.css" rel="stylesheet">
+    <link href="css/font-awesome.css" rel="stylesheet">
+
+    <!-- Scripts TCC -->
+    <!-- Elemento Quimico/Molecula -->
+    <script src="js/quimica/Atomo.js"></script>
+    <script src="js/quimica/Ligacao.js"></script>
+    <script src="js/quimica/Molecula.js"></script>
+    <script src="js/quimica/TipoLigacao.js"></script>
+    <script src="js/quimica/ModoLigacao.js"></script>
+    <script src="js/quimica/GrandeGrupoElemento.js"></script>
+    <script src="js/quimica/GrupoElemento.js"></script>
+    <script src="js/quimica/TipoGeometriaMolecular.js"></script>
+
+    <!-- Banco de Dados* -->
+    <script src="js/quimica/ElementosQuimicos.js"></script>
+
+    <!-- Parser de Formula Quimica -->
+    <script src="js/quimica/FormulaQuimicaParser.js"></script>
+
+    <!-- Visedu Quimica -->
+    <script src="js/visedu/Utilitario.js"></script>
+    <script src="js/visedu/ViseduQuimica.js"></script>
+    <script src="js/visedu/FormulaEstruturalDrawer.js"></script>
+    <script src="js/testes/DesenhaMolecula3D.js"></script>
+
+    <!-- Custom Engine -->
+    <script src="js/libs/Fabric.js"></script>
+    <script src="js/libs/Three.js"></script>
+    <script src="js/libs/custom/ThreeJSCustomHandler.js"></script>
+    <script src="js/libs/custom/AtomoRenderComponent.js"></script>
+    <script src="js/libs/custom/LigacaoRenderComponent.js"></script>
+    <script src="js/libs/control/TrackballControls.js"></script>
+
+</head>
+
+<body>
+
+<div id="wrapper">
+
+      <div id="page-wrapper">
+        <!--<div class="row">-->
+            <!--<div class="col-lg-12">-->
+                <!--<h4 class="page-header">Fórmula Estrutural 2D(Edição)</h4>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div class="row">-->
+            <!--<div class="col-lg-12">-->
+                <!--<div class="panel panel-default">-->
+                    <!--<div class="panel-heading">-->
+                        <!--<i class="fa fa-paint-brush"></i> Desenhe a Fórmula Estrutral Aqui!-->
+                    <!--</div>-->
+                    <!--<div class="panel-body" id="divDesenho" style="min-height: 500px">-->
+                        <!--<canvas id="canvasDesenho" width="100%" style="border: solid 1px lightgray"></canvas>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div id="menu">-->
+            <!--<button class="btn btn-default col-xs-12" type="button" id="btn_gera3d">-->
+                <!--<i class="fa fa-gears"></i>-->
+            <!--</button>-->
+        <!--</div>-->
+        <div class="row">
+            <div class="col-lg-12">
+                <h4 class="page-header">Fórmula Estrutural 3D(Visualização)</h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <i class="fa fa-picture-o"></i> Resultado 3D
+                    </div>
+                    <div class="panel-body" id="divResultado" style="min-height: 500px">
+                        <div id="canvasResultado">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>
