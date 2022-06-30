@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root text="&#34;Converter De NSD para Iterativo&#34;,&#34;&#34;,&#34;Eqto T&#34;,&#34;Faca(Se T&#34;,&#34;     Entao F&#34;,&#34;     Senao G&#34;,&#34;     )&#34;" comment="&#34;&#34;" color="ffffff" type="program" style="nice">
+	<children>
+		<while text="&#34;1) T&#34;" comment="&#34;&#34;" color="ffffff">
+			<qWhile>
+				<alternative text="&#34;2) T&#34;" comment="&#34;&#34;" color="ffffff">
+					<qTrue>
+						<instruction text="&#34;3) F&#34;" comment="&#34;&#34;" color="ffffff" rotated="0"></instruction>
+					</qTrue>
+					<qFalse>
+						<instruction text="&#34;4) G&#34;" comment="&#34;&#34;" color="ffffff" rotated="0"></instruction>
+					</qFalse>
+				</alternative>
+			</qWhile>
+		</while>
+	</children>
+</root>
